@@ -1,0 +1,21 @@
+spaday_fluent
+=============
+
+.. py:module:: spaday_fluent
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_fluent.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+   :value: '0.1.0'
+
+
