@@ -95,3 +95,23 @@ test("follows spaday's page mode, islands included", async ({ page }) => {
   expect(r.dark.spa).not.toBe(r.light.spa); // the shell palette follows Fluent's theme
   expect(r.island).toBe(r.light.spa);
 });
+
+test("warns, naming what it serves, when another copy registered its elements first", async ({
+  page,
+}) => {
+  // the page keeps the first registration, so the loser says which elements are not its own
+  const warnings = [];
+  page.on("console", (message) => {
+    if (message.type() === "warning") warnings.push(message.text());
+  });
+  await page.addInitScript(() => {
+    customElements.define("fluent-button", class extends HTMLElement {});
+  });
+  await page.goto("/dist/index.html");
+  await expect
+    .poll(() => warnings.find((text) => text.includes("<fluent-button>")))
+    .toMatch(/ \d+\.\d+\.\d+\S*: another copy on the page already registered /);
+  expect(warnings.find((text) => text.includes("<fluent-button>"))).toContain(
+    "@fluentui/web-components ",
+  );
+});
