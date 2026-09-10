@@ -3,10 +3,11 @@
 /* Fluent is the design system, so it drives the shell palette rather than deferring to it: every
  * --spa-* token spaday and its component packages read is mapped onto the Fluent token that owns
  * it. Restyle Fluent (its tokens, or a theme passed to setTheme) and the shell, the graphs, the
- * tables and the trees follow. Declared wherever Fluent's theme can change -- the root and
- * spaday's wa-dark / wa-light islands -- so each recomputes against the tokens in force there
- * instead of inheriting the root's. */
+ * tables and the trees follow. Declared wherever Fluent's theme can change -- the root, the spaday
+ * app a `css()` call themes, and spaday's wa-dark / wa-light islands -- so each recomputes against
+ * the tokens in force there instead of inheriting the root's. */
 :root,
+spa-app,
 .wa-dark,
 .wa-light {
   --spa-surface: var(--colorNeutralBackground1);

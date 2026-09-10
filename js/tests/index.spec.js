@@ -53,6 +53,24 @@ test("publishes the Fluent version it serves", async ({ page }) => {
   );
 });
 
+test("a Fluent token set on the app drives the shell palette inside it", async ({
+  page,
+}) => {
+  // what `App().css(colorBrandBackground=...)` renders
+  await page.goto("/dist/index.html");
+  expect(
+    await page.evaluate(() => {
+      const app = document.createElement("spa-app");
+      app.style.setProperty("--colorBrandBackground", "rgb(255, 0, 0)");
+      const probe = document.createElement("div");
+      probe.style.color = "var(--spa-accent)";
+      app.append(probe);
+      document.body.append(app);
+      return getComputedStyle(probe).color;
+    }),
+  ).toBe("rgb(255, 0, 0)");
+});
+
 test("follows spaday's page mode, islands included", async ({ page }) => {
   await page.goto("/dist/index.html");
   const r = await page.evaluate(() => {
