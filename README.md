@@ -25,6 +25,19 @@ Manifest, so props, events and slots are checked when you author the tree; enum 
 `appearance` carry their choices. Installing the package does not inject assets; select it with
 `packages=["fluent"]` or pass the exported `package` descriptor.
 
+## Run the local example
+
+```bash
+python -m pip install -e ".[examples]"
+python -m spaday_fluent.example
+```
+
+Open `http://127.0.0.1:8024` for the [sprint hub](spaday_fluent/example.py): a task board streamed from
+Python over transports with progress bars, badges and avatars, tasks closed through a Python endpoint, an
+activity drawer, a team accordion whose presence updates live, a task form of text input, dropdown, radio
+group, slider, text area and checkbox bound to spaday state and confirmed in a dialog, tabs, a tooltip,
+and a dark switch that re-themes Fluent and the spaday shell together.
+
 ## Theming
 
 Fluent's design tokens are CSS custom properties. The stylesheet carries Fluent's light and dark
