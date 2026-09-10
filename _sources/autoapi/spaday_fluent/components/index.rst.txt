@@ -1,25 +1,7 @@
-spaday_fluent
-=============
+spaday_fluent.components
+========================
 
-.. py:module:: spaday_fluent
-
-
-Submodules
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   /autoapi/spaday_fluent/components/index
-
-
-Attributes
-----------
-
-.. autoapisummary::
-
-   spaday_fluent.package
-   spaday_fluent.TOKENS
+.. py:module:: spaday_fluent.components
 
 
 Classes
@@ -27,52 +9,68 @@ Classes
 
 .. autoapisummary::
 
-   spaday_fluent.FluentAccordion
-   spaday_fluent.FluentAccordionItem
-   spaday_fluent.FluentAnchorButton
-   spaday_fluent.FluentAvatar
-   spaday_fluent.FluentBadge
-   spaday_fluent.FluentButton
-   spaday_fluent.FluentCheckbox
-   spaday_fluent.FluentCompoundButton
-   spaday_fluent.FluentCounterBadge
-   spaday_fluent.FluentDialog
-   spaday_fluent.FluentDialogBody
-   spaday_fluent.FluentDivider
-   spaday_fluent.FluentDrawer
-   spaday_fluent.FluentDrawerBody
-   spaday_fluent.FluentDropdown
-   spaday_fluent.FluentField
-   spaday_fluent.FluentImage
-   spaday_fluent.FluentLabel
-   spaday_fluent.FluentLink
-   spaday_fluent.FluentListbox
-   spaday_fluent.FluentMenu
-   spaday_fluent.FluentMenuButton
-   spaday_fluent.FluentMenuItem
-   spaday_fluent.FluentMenuList
-   spaday_fluent.FluentMessageBar
-   spaday_fluent.FluentOption
-   spaday_fluent.FluentProgressBar
-   spaday_fluent.FluentRadio
-   spaday_fluent.FluentRadioGroup
-   spaday_fluent.FluentRatingDisplay
-   spaday_fluent.FluentSlider
-   spaday_fluent.FluentSpinner
-   spaday_fluent.FluentSwitch
-   spaday_fluent.FluentTab
-   spaday_fluent.FluentTablist
-   spaday_fluent.FluentText
-   spaday_fluent.FluentTextInput
-   spaday_fluent.FluentTextarea
-   spaday_fluent.FluentToggleButton
-   spaday_fluent.FluentTooltip
-   spaday_fluent.FluentTree
-   spaday_fluent.FluentTreeItem
+   spaday_fluent.components.FluentAccordionItem
+   spaday_fluent.components.FluentAccordion
+   spaday_fluent.components.FluentButton
+   spaday_fluent.components.FluentAnchorButton
+   spaday_fluent.components.FluentAvatar
+   spaday_fluent.components.FluentBadge
+   spaday_fluent.components.FluentCheckbox
+   spaday_fluent.components.FluentCompoundButton
+   spaday_fluent.components.FluentCounterBadge
+   spaday_fluent.components.FluentDialog
+   spaday_fluent.components.FluentDialogBody
+   spaday_fluent.components.FluentDivider
+   spaday_fluent.components.FluentDrawer
+   spaday_fluent.components.FluentDrawerBody
+   spaday_fluent.components.FluentOption
+   spaday_fluent.components.FluentListbox
+   spaday_fluent.components.FluentDropdown
+   spaday_fluent.components.FluentField
+   spaday_fluent.components.FluentImage
+   spaday_fluent.components.FluentLabel
+   spaday_fluent.components.FluentLink
+   spaday_fluent.components.FluentMenuButton
+   spaday_fluent.components.FluentMenuItem
+   spaday_fluent.components.FluentMenuList
+   spaday_fluent.components.FluentMenu
+   spaday_fluent.components.FluentMessageBar
+   spaday_fluent.components.FluentProgressBar
+   spaday_fluent.components.FluentRadio
+   spaday_fluent.components.FluentRadioGroup
+   spaday_fluent.components.FluentRatingDisplay
+   spaday_fluent.components.FluentSlider
+   spaday_fluent.components.FluentSpinner
+   spaday_fluent.components.FluentSwitch
+   spaday_fluent.components.FluentTab
+   spaday_fluent.components.FluentTablist
+   spaday_fluent.components.FluentTextarea
+   spaday_fluent.components.FluentTextInput
+   spaday_fluent.components.FluentText
+   spaday_fluent.components.FluentToggleButton
+   spaday_fluent.components.FluentTooltip
+   spaday_fluent.components.FluentTreeItem
+   spaday_fluent.components.FluentTree
 
 
-Package Contents
-----------------
+Module Contents
+---------------
+
+.. py:class:: FluentAccordionItem(*children: spaday.component.Child, key: str | None = None, size: Literal['small', 'medium', 'large', 'extra-large'] | None = None, marker_position: Literal['start', 'end'] | None = None, block: bool | None = None, heading_level: Any = None, expanded: bool | None = None, disabled: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   An Accordion Item Custom HTML Element. Based on BaseAccordionItem and includes style and layout specific attributes
+
+
+   .. py:attribute:: tag
+      :value: 'fluent-accordion-item'
+
+
+
+   .. py:attribute:: schema
+
 
 .. py:class:: FluentAccordion(*children: spaday.component.Child, key: str | None = None, expand_mode: Literal['single', 'multi'] | None = None, **props: Any)
 
@@ -90,16 +88,16 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:class:: FluentAccordionItem(*children: spaday.component.Child, key: str | None = None, size: Literal['small', 'medium', 'large', 'extra-large'] | None = None, marker_position: Literal['start', 'end'] | None = None, block: bool | None = None, heading_level: Any = None, expanded: bool | None = None, disabled: bool | None = None, **props: Any)
+.. py:class:: FluentButton(*children: spaday.component.Child, key: str | None = None, appearance: Literal['primary', 'outline', 'subtle', 'transparent'] | None = None, shape: Literal['circular', 'rounded', 'square'] | None = None, size: Literal['small', 'medium', 'large'] | None = None, icon_only: bool | None = None, disabled: bool | None = None, disabled_focusable: bool | None = None, formaction: str | None = None, form: str | None = None, formenctype: str | None = None, formmethod: str | None = None, formnovalidate: bool | None = None, formtarget: Literal['_blank', '_self', '_parent', '_top'] | None = None, name: str | None = None, type: Literal['submit', 'reset', 'button'] | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
 
-   An Accordion Item Custom HTML Element. Based on BaseAccordionItem and includes style and layout specific attributes
+   A Button Custom HTML Element. Based on BaseButton and includes style and layout specific attributes
 
 
    .. py:attribute:: tag
-      :value: 'fluent-accordion-item'
+      :value: 'fluent-button'
 
 
 
@@ -148,22 +146,6 @@ Package Contents
 
    .. py:attribute:: tag
       :value: 'fluent-badge'
-
-
-
-   .. py:attribute:: schema
-
-
-.. py:class:: FluentButton(*children: spaday.component.Child, key: str | None = None, appearance: Literal['primary', 'outline', 'subtle', 'transparent'] | None = None, shape: Literal['circular', 'rounded', 'square'] | None = None, size: Literal['small', 'medium', 'large'] | None = None, icon_only: bool | None = None, disabled: bool | None = None, disabled_focusable: bool | None = None, formaction: str | None = None, form: str | None = None, formenctype: str | None = None, formmethod: str | None = None, formnovalidate: bool | None = None, formtarget: Literal['_blank', '_self', '_parent', '_top'] | None = None, name: str | None = None, type: Literal['submit', 'reset', 'button'] | None = None, value: str | None = None, **props: Any)
-
-   Bases: :py:obj:`spaday.component.Component`
-
-
-   A Button Custom HTML Element. Based on BaseButton and includes style and layout specific attributes
-
-
-   .. py:attribute:: tag
-      :value: 'fluent-button'
 
 
 
@@ -298,6 +280,38 @@ Package Contents
    .. py:attribute:: schema
 
 
+.. py:class:: FluentOption(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, disabled: bool | None = None, form: str | None = None, freeform: bool | None = None, id: str | None = None, value: str | None = None, name: str | None = None, text: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   A DropdownOption Custom HTML Element. Implements the https://w3c.github.io/aria/#option | ARIA option role.
+
+
+   .. py:attribute:: tag
+      :value: 'fluent-option'
+
+
+
+   .. py:attribute:: schema
+
+
+.. py:class:: FluentListbox(*children: spaday.component.Child, key: str | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   A Listbox Custom HTML Element. Implements the https://w3c.github.io/aria/#listbox | ARIA listbox role.
+
+
+   .. py:attribute:: tag
+      :value: 'fluent-listbox'
+
+
+
+   .. py:attribute:: schema
+
+
 .. py:class:: FluentDropdown(*children: spaday.component.Child, key: str | None = None, appearance: str | None = None, size: Literal['small', 'medium', 'large'] | None = None, aria_labelledby: str | None = None, disabled: bool | None = None, id: str | None = None, value: str | None = None, multiple: bool | None = None, name: str | None = None, placeholder: str | None = None, required: bool | None = None, type: Literal['combobox', 'dropdown', 'select'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
@@ -378,38 +392,6 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:class:: FluentListbox(*children: spaday.component.Child, key: str | None = None, **props: Any)
-
-   Bases: :py:obj:`spaday.component.Component`
-
-
-   A Listbox Custom HTML Element. Implements the https://w3c.github.io/aria/#listbox | ARIA listbox role.
-
-
-   .. py:attribute:: tag
-      :value: 'fluent-listbox'
-
-
-
-   .. py:attribute:: schema
-
-
-.. py:class:: FluentMenu(*children: spaday.component.Child, key: str | None = None, open_on_hover: bool | None = None, open_on_context: bool | None = None, close_on_scroll: bool | None = None, persist_on_item_click: bool | None = None, split: bool | None = None, **props: Any)
-
-   Bases: :py:obj:`spaday.component.Component`
-
-
-   The Menu component functions as a customizable menu element.
-
-
-   .. py:attribute:: tag
-      :value: 'fluent-menu'
-
-
-
-   .. py:attribute:: schema
-
-
 .. py:class:: FluentMenuButton(*children: spaday.component.Child, key: str | None = None, appearance: Literal['primary', 'outline', 'subtle', 'transparent'] | None = None, shape: Literal['circular', 'rounded', 'square'] | None = None, size: Literal['small', 'medium', 'large'] | None = None, icon_only: bool | None = None, disabled: bool | None = None, disabled_focusable: bool | None = None, formaction: str | None = None, form: str | None = None, formenctype: str | None = None, formmethod: str | None = None, formnovalidate: bool | None = None, formtarget: Literal['_blank', '_self', '_parent', '_top'] | None = None, name: str | None = None, type: Literal['submit', 'reset', 'button'] | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
@@ -458,6 +440,22 @@ Package Contents
    .. py:attribute:: schema
 
 
+.. py:class:: FluentMenu(*children: spaday.component.Child, key: str | None = None, open_on_hover: bool | None = None, open_on_context: bool | None = None, close_on_scroll: bool | None = None, persist_on_item_click: bool | None = None, split: bool | None = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   The Menu component functions as a customizable menu element.
+
+
+   .. py:attribute:: tag
+      :value: 'fluent-menu'
+
+
+
+   .. py:attribute:: schema
+
+
 .. py:class:: FluentMessageBar(*children: spaday.component.Child, key: str | None = None, shape: Literal['rounded', 'square'] | None = None, layout: Literal['multiline', 'singleline'] | None = None, intent: Literal['success', 'warning', 'error', 'info'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
@@ -468,22 +466,6 @@ Package Contents
 
    .. py:attribute:: tag
       :value: 'fluent-message-bar'
-
-
-
-   .. py:attribute:: schema
-
-
-.. py:class:: FluentOption(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, disabled: bool | None = None, form: str | None = None, freeform: bool | None = None, id: str | None = None, value: str | None = None, name: str | None = None, text: str | None = None, **props: Any)
-
-   Bases: :py:obj:`spaday.component.Component`
-
-
-   A DropdownOption Custom HTML Element. Implements the https://w3c.github.io/aria/#option | ARIA option role.
-
-
-   .. py:attribute:: tag
-      :value: 'fluent-option'
 
 
 
@@ -634,16 +616,16 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:class:: FluentText(*children: spaday.component.Child, key: str | None = None, nowrap: bool | None = None, truncate: bool | None = None, italic: bool | None = None, underline: bool | None = None, strikethrough: bool | None = None, block: bool | None = None, size: Literal['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000'] | None = None, font: Literal['base', 'numeric', 'monospace'] | None = None, weight: Literal['medium', 'regular', 'semibold', 'bold'] | None = None, align: Literal['start', 'end', 'center', 'justify'] | None = None, **props: Any)
+.. py:class:: FluentTextarea(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline', 'filled-darker', 'filled-lighter'] | None = None, block: bool | None = None, size: Literal['small', 'medium', 'large'] | None = None, autocomplete: Literal['on', 'off'] | None = None, auto_resize: bool | None = None, dirname: str | None = None, disabled: bool | None = None, display_shadow: bool | None = None, form: str | None = None, maxlength: float | None = None, minlength: float | None = None, name: str | None = None, placeholder: str | None = None, readonly: bool | None = None, required: bool | None = None, resize: Literal['none', 'horizontal', 'vertical', 'both'] | None = None, spellcheck: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
 
-   The base class used for constructing a fluent-text custom element
+   The Fluent TextArea Element.
 
 
    .. py:attribute:: tag
-      :value: 'fluent-text'
+      :value: 'fluent-textarea'
 
 
 
@@ -666,16 +648,16 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:class:: FluentTextarea(*children: spaday.component.Child, key: str | None = None, appearance: Literal['outline', 'filled-darker', 'filled-lighter'] | None = None, block: bool | None = None, size: Literal['small', 'medium', 'large'] | None = None, autocomplete: Literal['on', 'off'] | None = None, auto_resize: bool | None = None, dirname: str | None = None, disabled: bool | None = None, display_shadow: bool | None = None, form: str | None = None, maxlength: float | None = None, minlength: float | None = None, name: str | None = None, placeholder: str | None = None, readonly: bool | None = None, required: bool | None = None, resize: Literal['none', 'horizontal', 'vertical', 'both'] | None = None, spellcheck: bool | None = None, **props: Any)
+.. py:class:: FluentText(*children: spaday.component.Child, key: str | None = None, nowrap: bool | None = None, truncate: bool | None = None, italic: bool | None = None, underline: bool | None = None, strikethrough: bool | None = None, block: bool | None = None, size: Literal['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000'] | None = None, font: Literal['base', 'numeric', 'monospace'] | None = None, weight: Literal['medium', 'regular', 'semibold', 'bold'] | None = None, align: Literal['start', 'end', 'center', 'justify'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
 
-   The Fluent TextArea Element.
+   The base class used for constructing a fluent-text custom element
 
 
    .. py:attribute:: tag
-      :value: 'fluent-textarea'
+      :value: 'fluent-text'
 
 
 
@@ -714,22 +696,6 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:class:: FluentTree(*children: spaday.component.Child, key: str | None = None, size: Literal['small', 'medium'] | None = None, appearance: Literal['subtle', 'transparent', 'subtle-alpha'] | None = None, **props: Any)
-
-   Bases: :py:obj:`spaday.component.Component`
-
-
-   The Fluent Tree Element. Implements @microsoft/fast-foundation#BaseTree.
-
-
-   .. py:attribute:: tag
-      :value: 'fluent-tree'
-
-
-
-   .. py:attribute:: schema
-
-
 .. py:class:: FluentTreeItem(*children: spaday.component.Child, key: str | None = None, size: Literal['small', 'medium'] | None = None, appearance: Literal['subtle', 'transparent', 'subtle-alpha'] | None = None, expanded: bool | None = None, selected: bool | None = None, empty: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
@@ -746,7 +712,19 @@ Package Contents
    .. py:attribute:: schema
 
 
-.. py:data:: package
+.. py:class:: FluentTree(*children: spaday.component.Child, key: str | None = None, size: Literal['small', 'medium'] | None = None, appearance: Literal['subtle', 'transparent', 'subtle-alpha'] | None = None, **props: Any)
 
-.. py:data:: TOKENS
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   The Fluent Tree Element. Implements @microsoft/fast-foundation#BaseTree.
+
+
+   .. py:attribute:: tag
+      :value: 'fluent-tree'
+
+
+
+   .. py:attribute:: schema
+
 
