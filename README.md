@@ -1,11 +1,13 @@
 # spaday-fluent
 
-Typed [Fluent UI web components](https://github.com/microsoft/fluentui/tree/master/packages/web-components) and browser assets for spaday.
+Typed [Fluent UI web components](https://github.com/microsoft/fluentui/tree/master/packages/web-components) and browser assets for [spaday](https://github.com/1kbgz/spaday).
 
 [![Build Status](https://github.com/1kbgz/spaday-fluent/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/1kbgz/spaday-fluent/actions/workflows/build.yaml)
 [![codecov](https://codecov.io/gh/1kbgz/spaday-fluent/branch/main/graph/badge.svg)](https://codecov.io/gh/1kbgz/spaday-fluent)
 [![License](https://img.shields.io/github/license/1kbgz/spaday-fluent)](https://github.com/1kbgz/spaday-fluent)
 [![PyPI](https://img.shields.io/pypi/v/spaday-fluent.svg)](https://pypi.python.org/pypi/spaday-fluent)
+
+[![Preview of fluent components in spaday rendering a sprint hub](https://raw.githubusercontent.com/1kbgz/spaday-fluent/main/docs/img/preview.webp)](./spaday_fluent/example.py)
 
 ## Overview
 
@@ -62,13 +64,6 @@ with `@microsoft/fast-element`, which a library extending Fluent's classes has t
 `@fluentui/tokens`, through the page's import map. A library built on Fluent that leaves those
 imports out of its bundle (`external: ["@fluentui/web-components", "@microsoft/fast-element"]` with
 esbuild) gets this copy, and nothing registers twice.
-
-## Development
-
-`make catalog` regenerates the typed classes from the installed Fluent package: it collects its
-manifest into `spaday_fluent/custom-elements.json` (`js/tools/manifest.mjs`) and generates
-`spaday_fluent/components.py` from it. Fluent 3.1.3's manifest still lists `fluent-option` and
-`fluent-textarea` under their old names; the collector corrects them.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
