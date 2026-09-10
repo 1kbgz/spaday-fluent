@@ -1,0 +1,304 @@
+spaday_fluent.example
+=====================
+
+.. py:module:: spaday_fluent.example
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_fluent.example.logger
+   spaday_fluent.example.TEAM
+   spaday_fluent.example.PEOPLE
+   spaday_fluent.example.DEFAULT_OWNER
+   spaday_fluent.example.BADGE
+   spaday_fluent.example.BACKLOG
+   spaday_fluent.example.feed
+   spaday_fluent.example.session
+   spaday_fluent.example.server
+   spaday_fluent.example.stats
+   spaday_fluent.example.board
+   spaday_fluent.example.team
+   spaday_fluent.example.new_task
+   spaday_fluent.example.created
+   spaday_fluent.example.activity
+   spaday_fluent.example.page
+   spaday_fluent.example.styles
+   spaday_fluent.example.app
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_fluent.example.SprintFeed
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   spaday_fluent.example.task
+   spaday_fluent.example.refresh_totals
+   spaday_fluent.example.log
+   spaday_fluent.example.next_number
+   spaday_fluent.example.update
+   spaday_fluent.example.run_sprint
+   spaday_fluent.example.create_task
+   spaday_fluent.example.complete_task
+   spaday_fluent.example.stat
+   spaday_fluent.example.labelled
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:data:: TEAM
+
+.. py:data:: PEOPLE
+
+.. py:data:: DEFAULT_OWNER
+   :value: 'Grace Hopper'
+
+
+.. py:data:: BADGE
+
+.. py:data:: BACKLOG
+   :value: [('Rotate service certificates', 'Linus Torvalds'), ('Redesign the empty states', 'Susan Kare'),...
+
+
+.. py:function:: task(number: int, title: str, owner: str, status: str = 'To do', progress: int = 0, points: int = 3) -> dict
+
+.. py:class:: SprintFeed(/, **data: Any)
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+
+   !!! abstract "Usage Documentation"
+       [Models](../concepts/models.md)
+
+   A base class for creating Pydantic models.
+
+   .. attribute:: __class_vars__
+
+      The names of the class variables defined on the model.
+
+   .. attribute:: __private_attributes__
+
+      Metadata about the private attributes of the model.
+
+   .. attribute:: __signature__
+
+      The synthesized `__init__` [`Signature`][inspect.Signature] of the model.
+
+   .. attribute:: __pydantic_complete__
+
+      Whether model building is completed, or if there are still undefined fields.
+
+   .. attribute:: __pydantic_core_schema__
+
+      The core schema of the model.
+
+   .. attribute:: __pydantic_custom_init__
+
+      Whether the model has a custom `__init__` function.
+
+   .. attribute:: __pydantic_decorators__
+
+      Metadata containing the decorators defined on the model.
+      This replaces `Model.__validators__` and `Model.__root_validators__` from Pydantic V1.
+
+   .. attribute:: __pydantic_generic_metadata__
+
+      A dictionary containing metadata about generic Pydantic models.
+      The `origin` and `args` items map to the [`__origin__`][genericalias.__origin__]
+      and [`__args__`][genericalias.__args__] attributes of [generic aliases][types-genericalias],
+      and the `parameter` item maps to the `__parameter__` attribute of generic classes.
+
+   .. attribute:: __pydantic_parent_namespace__
+
+      Parent namespace of the model, used for automatic rebuilding of models.
+
+   .. attribute:: __pydantic_post_init__
+
+      The name of the post-init method for the model, if defined.
+
+   .. attribute:: __pydantic_root_model__
+
+      Whether the model is a [`RootModel`][pydantic.root_model.RootModel].
+
+   .. attribute:: __pydantic_serializer__
+
+      The `pydantic-core` `SchemaSerializer` used to dump instances of the model.
+
+   .. attribute:: __pydantic_validator__
+
+      The `pydantic-core` `SchemaValidator` used to validate instances of the model.
+
+   .. attribute:: __pydantic_fields__
+
+      A dictionary of field names and their corresponding [`FieldInfo`][pydantic.fields.FieldInfo] objects.
+
+   .. attribute:: __pydantic_computed_fields__
+
+      A dictionary of computed field names and their corresponding [`ComputedFieldInfo`][pydantic.fields.ComputedFieldInfo] objects.
+
+   .. attribute:: __pydantic_extra__
+
+      A dictionary containing extra values, if [`extra`][pydantic.config.ConfigDict.extra]
+      is set to `'allow'`.
+
+   .. attribute:: __pydantic_fields_set__
+
+      The names of fields explicitly set during instantiation.
+
+   .. attribute:: __pydantic_private__
+
+      Values of private attributes set on the model instance.
+
+   Create a new model by parsing and validating input data from keyword arguments.
+
+   Raises [`ValidationError`][pydantic_core.ValidationError] if the input data cannot be
+   validated to form a valid model.
+
+   `self` is explicitly positional-only to allow `self` as a field name.
+
+
+   .. py:attribute:: tasks
+      :type:  list[dict]
+
+
+   .. py:attribute:: activity
+      :type:  list[dict]
+
+
+   .. py:attribute:: presence
+      :type:  dict[str, str]
+
+
+   .. py:attribute:: velocity
+      :type:  int
+      :value: 0
+
+
+
+   .. py:attribute:: done_points
+      :type:  str
+      :value: ''
+
+
+
+   .. py:attribute:: open_tasks
+      :type:  int
+      :value: 0
+
+
+
+   .. py:attribute:: health
+      :type:  float
+      :value: 4.0
+
+
+
+.. py:data:: feed
+
+.. py:data:: session
+
+.. py:data:: server
+
+.. py:function:: refresh_totals() -> None
+
+.. py:function:: log(text: str) -> None
+
+.. py:function:: next_number() -> int
+
+.. py:function:: update(task_id: str, **changes) -> None
+
+.. py:function:: run_sprint() -> None
+   :async:
+
+
+   Work in progress advances every tick, a waiting task gets picked up when nothing is moving, the
+   backlog feeds new tasks in, and people come and go.
+
+
+.. py:function:: create_task(request)
+   :async:
+
+
+.. py:function:: complete_task(request)
+   :async:
+
+
+.. py:function:: stat(label: str, *body)
+
+.. py:data:: stats
+
+.. py:data:: board
+
+.. py:data:: team
+
+.. py:function:: labelled(label: str, control, message: str | None = None)
+
+.. py:data:: new_task
+
+.. py:data:: created
+
+.. py:data:: activity
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        body { margin: 0; font-family: var(--fontFamilyBase); background: var(--colorNeutralBackground2); color: var(--colorNeutralForeground1); }
+        spa-nav { justify-content: space-between; }
+        .page { box-sizing: border-box; width: 100%; max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem;
+          display: grid; align-content: start; gap: 1rem; }
+        .stats { flex-wrap: wrap; }
+        .stat { flex: 1 1 14rem; display: grid; align-content: start; gap: .5rem; padding: 1rem;
+          border-radius: var(--borderRadiusXLarge); background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); }
+        .stat-label { color: var(--colorNeutralForeground3); }
+        .board, .members { display: grid; gap: .5rem; }
+        .task { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;
+          border-radius: var(--borderRadiusLarge); background: var(--colorNeutralBackground1); box-shadow: var(--shadow2); }
+        .task-main { display: grid; gap: .25rem; min-width: 0; }
+        .member { display: flex; align-items: center; gap: .75rem; }
+        .member fluent-badge { margin-left: auto; }
+        .new-task { display: grid; gap: 1rem; padding: 1rem; border-radius: var(--borderRadiusXLarge); background: var(--colorNeutralBackground1); }
+        .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
+        [hidden] { display: none !important; }
+        .form-grid > fluent-field, .form-grid > fluent-field > [slot="input"] { width: 100%; max-width: none; }
+        fluent-radio-group { gap: 1rem; }
+        .form-actions .spacer { flex: 1; }
+        .entry { display: grid; gap: .5rem; padding-block: .25rem; }
+        @media (max-width: 720px) {
+          .form-grid { grid-template-columns: 1fr; }
+          .task { grid-template-columns: auto 1fr; }
+          .task fluent-badge, .task fluent-button { grid-column: 2; justify-self: start; }
+        }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+

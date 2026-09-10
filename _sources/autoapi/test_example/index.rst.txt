@@ -1,0 +1,39 @@
+test_example
+============
+
+.. py:module:: test_example
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_example.request
+   test_example.run_ticks
+   test_example.test_example_serves_the_hub
+   test_example.test_sprint_moves_work_and_feeds_the_backlog
+   test_example.test_creating_a_task_adds_it_and_logs_it
+   test_example.test_closing_a_task_finishes_it_once
+
+
+Module Contents
+---------------
+
+.. py:function:: request(method: str, path: str, **kwargs)
+   :async:
+
+
+.. py:function:: run_ticks(monkeypatch, ticks: int)
+
+   Run the sprint loop for ``ticks`` iterations.
+
+
+.. py:function:: test_example_serves_the_hub()
+
+.. py:function:: test_sprint_moves_work_and_feeds_the_backlog(monkeypatch)
+
+.. py:function:: test_creating_a_task_adds_it_and_logs_it()
+
+.. py:function:: test_closing_a_task_finishes_it_once()
+

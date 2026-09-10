@@ -11,6 +11,7 @@ Submodules
    :maxdepth: 1
 
    /autoapi/spaday_fluent/components/index
+   /autoapi/spaday_fluent/example/index
 
 
 Attributes
