@@ -21,6 +21,13 @@ const VERSION = JSON.parse(
   fs.readFileSync("node_modules/@fluentui/web-components/package.json", "utf8"),
 ).version;
 
+// the elements this bundle serves: the define-guard warns about any that another copy registered first
+const TAGS = JSON.parse(
+  fs.readFileSync("../spaday_fluent/custom-elements.json", "utf8"),
+)
+  .modules.flatMap((mod) => mod.declarations.map((decl) => decl.tagName))
+  .filter(Boolean);
+
 // Every element's define module, `@fluentui/web-components/<name>.js`, behind the define-guard. The
 // guard is a module of its own, imported first: every import evaluates before the importing
 // module's body, so an inlined guard would install too late. The specifiers stay imports, resolved
@@ -35,7 +42,7 @@ const ENTRY = {
   contents: [
     'import { restoreDefine } from "./define-guard.js";',
     defines,
-    "restoreDefine();",
+    `restoreDefine(${JSON.stringify(`@fluentui/web-components ${VERSION}`)}, ${JSON.stringify(TAGS)});`,
     // the version actually served, so a page holding a second copy can compare and refuse rather
     // than half-work
     `Object.defineProperty(globalThis, "__spadayFluent", { value: Object.freeze({ version: ${JSON.stringify(VERSION)} }), configurable: true });`,
@@ -130,6 +137,23 @@ async function build() {
       `<script type="importmap">\n${map}\n    </script>`,
     );
   fs.writeFileSync("dist/index.html", html);
+
+  // the exact version of every library this package serves, read by the Python package as its
+  // ComponentPackage.provides, so spaday can reconcile it with the other packages on a page
+  const { dependencies = {} } = JSON.parse(
+    fs.readFileSync("package.json", "utf8"),
+  );
+  const served = Object.fromEntries(
+    Object.keys(dependencies).map((name) => [
+      name,
+      JSON.parse(fs.readFileSync(`node_modules/${name}/package.json`, "utf8"))
+        .version,
+    ]),
+  );
+  fs.writeFileSync(
+    "dist/versions.json",
+    `${JSON.stringify(served, null, 2)}\n`,
+  );
 
   // Copy servable assets to python extension (exclude esm/)
   fs.mkdirSync("../spaday_fluent/extension", { recursive: true });
