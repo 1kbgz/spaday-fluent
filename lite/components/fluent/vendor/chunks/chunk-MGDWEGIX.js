@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-FUXJWCXM.js";var n={modal:"modal",nonModal:"non-modal",alert:"alert"};function r(o,a="-dialog"){return o?.nodeType!==Node.ELEMENT_NODE?!1:o.tagName.toLowerCase().endsWith(a)}var i=`${e.prefix}-dialog`;export{n as a,r as b,i as c};

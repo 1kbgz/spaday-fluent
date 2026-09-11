@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-WJASICV3.js";function n(e,...p){let c=r.locate(e);p.forEach(o=>{Object.getOwnPropertyNames(o.prototype).forEach(t=>{t!=="constructor"&&Object.defineProperty(e.prototype,t,Object.getOwnPropertyDescriptor(o.prototype,t))}),r.locate(o).forEach(t=>c.push(t))})}export{n as a};

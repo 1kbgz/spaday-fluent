@@ -1,0 +1,142 @@
+spaday_fluent.gallery
+=====================
+
+.. py:module:: spaday_fluent.gallery
+
+.. autoapi-nested-parse::
+
+   Gallery of every Fluent component wrapped by spaday-fluent.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_fluent.gallery.COMPONENT_SNIPPETS
+   spaday_fluent.gallery.actions
+   spaday_fluent.gallery.forms
+   spaday_fluent.gallery.content
+   spaday_fluent.gallery.navigation
+   spaday_fluent.gallery.feedback
+   spaday_fluent.gallery.overlays
+   spaday_fluent.gallery.page
+   spaday_fluent.gallery.styles
+   spaday_fluent.gallery.app
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   spaday_fluent.gallery._snippet
+   spaday_fluent.gallery._offsets
+   spaday_fluent.gallery._code
+   spaday_fluent.gallery._demo
+   spaday_fluent.gallery._section
+
+
+Module Contents
+---------------
+
+.. py:data:: COMPONENT_SNIPPETS
+   :type:  list[str]
+   :value: []
+
+
+.. py:function:: _snippet(names: str, body: str) -> str
+
+.. py:function:: _offsets(source: str) -> list[int]
+
+.. py:function:: _code(source: str)
+
+   Render a dependency-free highlighted Python code block.
+
+
+.. py:function:: _demo(title: str, description: str, source: str, preview)
+
+.. py:function:: _section(section_id: str, title: str, description: str, *cards)
+
+.. py:data:: actions
+
+.. py:data:: forms
+
+.. py:data:: content
+
+.. py:data:: navigation
+
+.. py:data:: feedback
+
+.. py:data:: overlays
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        :root { color-scheme: light; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; background: radial-gradient(circle at 12% 0, color-mix(in srgb, var(--colorBrandBackground) 15%, transparent),
+          transparent 30rem), var(--colorNeutralBackground2); color: var(--colorNeutralForeground1); font-family: var(--fontFamilyBase), system-ui, sans-serif; }
+        .gallery-page { box-sizing: border-box; width: min(100%, 92rem); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+        .hero { padding: 2rem 0 1rem; }
+        .eyebrow, .section-label { margin: 0; color: var(--colorBrandForeground1); font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
+        h1 { margin: .35rem 0 0; font-size: clamp(2.4rem, 6vw, 4.75rem); letter-spacing: -.055em; line-height: .98; }
+        .lede { max-width: 48rem; margin: 1rem 0 1.5rem; color: var(--colorNeutralForeground3); font-size: 1.08rem; line-height: 1.6; }
+        .section-nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+        .section-nav a { padding: .45rem .75rem; border: 1px solid var(--colorNeutralStroke2); border-radius: 999px;
+          color: var(--colorNeutralForeground2); text-decoration: none; background: color-mix(in srgb, var(--colorNeutralBackground1) 92%, transparent); }
+        .section-nav a:hover { border-color: var(--colorBrandStroke1); color: var(--colorBrandForeground1); }
+        .gallery-section { scroll-margin-top: 4rem; padding: 3rem 0 1rem; }
+        .gallery-section > header { max-width: 44rem; margin-bottom: 1.25rem; }
+        .gallery-section h2 { margin: .3rem 0 .4rem; font-size: 2rem; letter-spacing: -.03em; }
+        .gallery-section > header > p:last-child { margin: 0; color: var(--colorNeutralForeground3); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr)); gap: 1rem; align-items: start; }
+        .gallery-card { display: block; min-width: 0; padding: 1.15rem; border: 1px solid var(--colorNeutralStroke2); border-radius: 1rem;
+          background: var(--colorNeutralBackground1); box-shadow: var(--shadow8); }
+        .demo-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+        .demo-heading > div { min-width: 0; }
+        .demo-heading > fluent-badge { flex: 0 0 auto; }
+        .demo-heading h3 { margin: 0; font-size: 1.05rem; }
+        .demo-heading p { margin: .3rem 0 0; color: var(--colorNeutralForeground3); font-size: .88rem; line-height: 1.45; }
+        .preview { box-sizing: border-box; min-height: 8.5rem; margin-bottom: 1rem; padding: 1.25rem; border: 1px solid var(--colorNeutralStroke2);
+          border-radius: .75rem; background: var(--colorNeutralBackground3); overflow: auto; }
+        .preview > * { max-width: 100%; }
+        .source { min-width: 0; }
+        .code-block { box-sizing: border-box; max-height: 18rem; margin: 0; padding: 1rem; overflow: auto; border-radius: .75rem;
+          color: #dbeafe; background: #172033; font: .78rem/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+          tab-size: 4; white-space: pre; }
+        .token-keyword { color: #c4b5fd; } .token-string { color: #86efac; } .token-number { color: #fcd34d; }
+        .token-comment { color: #94a3b8; font-style: italic; } .token-operator { color: #7dd3fc; }
+        .inline-preview { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+        .stack, .form-preview { display: grid; gap: .8rem; }
+        .form-preview > fluent-field, .form-preview > fluent-field > [slot="input"] { width: 100%; max-width: none; }
+        .selection-preview label { display: flex; align-items: center; gap: .55rem; }
+        .selection-preview fluent-slider { flex: 1; min-width: 12rem; }
+        .gallery-image { display: block; width: 100%; height: 8rem; border-radius: .5rem; overflow: hidden; }
+        .gallery-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--colorNeutralStroke2);
+          color: var(--colorNeutralForeground3); font-size: .85rem; }
+        @media (max-width: 600px) { .gallery-page { padding-inline: .75rem; } .gallery-section { padding-top: 2rem; }
+          .preview { padding: .9rem; } }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+

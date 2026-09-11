@@ -26,6 +26,7 @@ Attributes
    spaday_fluent.example.activity
    spaday_fluent.example.page
    spaday_fluent.example.styles
+   spaday_fluent.example.initial_store
    spaday_fluent.example.app
 
 
@@ -265,21 +266,38 @@ Module Contents
 
       """
       <style>
-        body { margin: 0; font-family: var(--fontFamilyBase); background: var(--colorNeutralBackground2); color: var(--colorNeutralForeground1); }
-        spa-nav { justify-content: space-between; }
-        .page { box-sizing: border-box; width: 100%; max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem;
+        body { margin: 0; min-height: 100vh; font-family: var(--fontFamilyBase); background: radial-gradient(circle at 12% 0,
+          color-mix(in srgb, var(--colorBrandBackground) 14%, transparent), transparent 30rem), var(--colorNeutralBackground2);
+          color: var(--colorNeutralForeground1); }
+        spa-nav { position: sticky; z-index: 20; top: 0; justify-content: space-between; border-bottom: 1px solid var(--colorNeutralStroke2);
+          background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); backdrop-filter: blur(14px); }
+        .page { box-sizing: border-box; width: 100%; max-width: 78rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem;
           display: grid; align-content: start; gap: 1rem; }
+        .hero { padding: 1rem 0 1.25rem; }
+        .eyebrow { margin: 0; color: var(--colorBrandForeground1); font-size: .72rem; font-weight: 700; letter-spacing: .16em; }
+        .hero-title { display: flex; align-items: center; gap: .85rem; margin-top: .4rem; }
+        .hero h1 { margin: 0; font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: .98; letter-spacing: -.055em; }
+        .lede { max-width: 46rem; margin: 1rem 0; color: var(--colorNeutralForeground3); font-size: 1.08rem; line-height: 1.6; }
+        .hero-meta { display: flex; flex-wrap: wrap; gap: .55rem; }
+        .hero-meta > span { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .7rem; border: 1px solid var(--colorNeutralStroke2);
+          border-radius: 999px; background: color-mix(in srgb, var(--colorNeutralBackground1) 92%, transparent); }
+        fluent-message-bar { display: block; }
         .stats { flex-wrap: wrap; }
-        .stat { flex: 1 1 14rem; display: grid; align-content: start; gap: .5rem; padding: 1rem;
-          border-radius: var(--borderRadiusXLarge); background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); }
+        .stat { flex: 1 1 14rem; display: grid; align-content: start; gap: .55rem; padding: 1.2rem;
+          border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusXLarge); background: var(--colorNeutralBackground1);
+          box-shadow: var(--shadow8); }
         .stat-label { color: var(--colorNeutralForeground3); }
         .board, .members { display: grid; gap: .5rem; }
         .task { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;
-          border-radius: var(--borderRadiusLarge); background: var(--colorNeutralBackground1); box-shadow: var(--shadow2); }
+          border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusLarge); background: var(--colorNeutralBackground1);
+          box-shadow: var(--shadow2); transition: transform .18s ease, box-shadow .18s ease; }
+        .task:hover { transform: translateY(-1px); box-shadow: var(--shadow8); }
         .task-main { display: grid; gap: .25rem; min-width: 0; }
         .member { display: flex; align-items: center; gap: .75rem; }
         .member fluent-badge { margin-left: auto; }
-        .new-task { display: grid; gap: 1rem; padding: 1rem; border-radius: var(--borderRadiusXLarge); background: var(--colorNeutralBackground1); }
+        .team, .new-task { padding: 1.2rem; border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusXLarge);
+          background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); }
+        .new-task { display: grid; gap: 1rem; }
         .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
         [hidden] { display: none !important; }
         .form-grid > fluent-field, .form-grid > fluent-field > [slot="input"] { width: 100%; max-width: none; }
@@ -287,6 +305,8 @@ Module Contents
         .form-actions .spacer { flex: 1; }
         .entry { display: grid; gap: .5rem; padding-block: .25rem; }
         @media (max-width: 720px) {
+          .page { padding: 1.75rem .75rem 3rem; }
+          .hero-title { align-items: flex-start; flex-direction: column; }
           .form-grid { grid-template-columns: 1fr; }
           .task { grid-template-columns: auto 1fr; }
           .task fluent-badge, .task fluent-button { grid-column: 2; justify-self: start; }
@@ -299,6 +319,8 @@ Module Contents
       </details>
 
 
+
+.. py:data:: initial_store
 
 .. py:data:: app
 

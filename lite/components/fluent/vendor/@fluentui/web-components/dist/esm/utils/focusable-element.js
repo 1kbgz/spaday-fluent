@@ -1,0 +1,1 @@
+var t=e=>e.getAttribute("aria-disabled")==="true"||e.elementInternals?.ariaDisabled==="true",r=e=>e.hasAttribute("hidden"),n=e=>!t(e)&&!r(e);export{t as isARIADisabledElement,n as isFocusableElement,r as isHiddenElement};

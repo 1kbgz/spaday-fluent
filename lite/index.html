@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>spaday-fluent in Pyodide</title>
+    <link rel="stylesheet" href="./components/fluent/css/fluent.css" />
+    <script type="importmap">
+{
+  "imports": {
+    "@fluentui/web-components": "./components/fluent/vendor/@fluentui/web-components/dist/esm/index.js",
+    "@fluentui/web-components/web-components.js": "./components/fluent/vendor/@fluentui/web-components/dist/web-components.js",
+    "@fluentui/web-components/web-components.min.js": "./components/fluent/vendor/@fluentui/web-components/dist/web-components.min.js",
+    "@fluentui/web-components/web-components-all.js": "./components/fluent/vendor/@fluentui/web-components/dist/web-components-all.js",
+    "@fluentui/web-components/web-components-all.min.js": "./components/fluent/vendor/@fluentui/web-components/dist/web-components-all.min.js",
+    "@fluentui/web-components/utilities.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/utils/index.js",
+    "@fluentui/web-components/accordion.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/accordion/define.js",
+    "@fluentui/web-components/accordion-item.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/accordion-item/define.js",
+    "@fluentui/web-components/anchor-button.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/anchor-button/define.js",
+    "@fluentui/web-components/avatar.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/avatar/define.js",
+    "@fluentui/web-components/badge.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/badge/define.js",
+    "@fluentui/web-components/button.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/button/define.js",
+    "@fluentui/web-components/checkbox.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/checkbox/define.js",
+    "@fluentui/web-components/compound-button.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/compound-button/define.js",
+    "@fluentui/web-components/counter-badge.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/counter-badge/define.js",
+    "@fluentui/web-components/dialog.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/dialog/define.js",
+    "@fluentui/web-components/dialog-body.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/dialog-body/define.js",
+    "@fluentui/web-components/divider.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/divider/define.js",
+    "@fluentui/web-components/drawer.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/drawer/define.js",
+    "@fluentui/web-components/drawer-body.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/drawer-body/define.js",
+    "@fluentui/web-components/dropdown.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/dropdown/define.js",
+    "@fluentui/web-components/field.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/field/define.js",
+    "@fluentui/web-components/image.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/image/define.js",
+    "@fluentui/web-components/label.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/label/define.js",
+    "@fluentui/web-components/link.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/link/define.js",
+    "@fluentui/web-components/listbox.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/listbox/define.js",
+    "@fluentui/web-components/menu.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/menu/define.js",
+    "@fluentui/web-components/menu-button.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/menu-button/define.js",
+    "@fluentui/web-components/menu-item.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/menu-item/define.js",
+    "@fluentui/web-components/menu-list.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/menu-list/define.js",
+    "@fluentui/web-components/message-bar.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/message-bar/define.js",
+    "@fluentui/web-components/option.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/option/define.js",
+    "@fluentui/web-components/progress-bar.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/progress-bar/define.js",
+    "@fluentui/web-components/radio.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/radio/define.js",
+    "@fluentui/web-components/radio-group.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/radio-group/define.js",
+    "@fluentui/web-components/rating-display.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/rating-display/define.js",
+    "@fluentui/web-components/slider.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/slider/define.js",
+    "@fluentui/web-components/spinner.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/spinner/define.js",
+    "@fluentui/web-components/switch.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/switch/define.js",
+    "@fluentui/web-components/tab.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/tab/define.js",
+    "@fluentui/web-components/tablist.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/tablist/define.js",
+    "@fluentui/web-components/text.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/text/define.js",
+    "@fluentui/web-components/text-input.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/text-input/define.js",
+    "@fluentui/web-components/textarea.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/textarea/define.js",
+    "@fluentui/web-components/toggle-button.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/toggle-button/define.js",
+    "@fluentui/web-components/tooltip.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/tooltip/define.js",
+    "@fluentui/web-components/tree.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/tree/define.js",
+    "@fluentui/web-components/tree-item.js": "./components/fluent/vendor/@fluentui/web-components/dist/esm/tree-item/define.js",
+    "@fluentui/web-components/": "./components/fluent/vendor/@fluentui/web-components/dist/esm/",
+    "@microsoft/fast-element": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/index.js",
+    "@microsoft/fast-element/arrays.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/observation/arrays.js",
+    "@microsoft/fast-element/attr.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/components/attributes.js",
+    "@microsoft/fast-element/attribute-map.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/declarative/attribute-map.js",
+    "@microsoft/fast-element/binding.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/binding/exports.js",
+    "@microsoft/fast-element/children.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/children.js",
+    "@microsoft/fast-element/context.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/context.js",
+    "@microsoft/fast-element/css.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/styles/css.js",
+    "@microsoft/fast-element/debug.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/debug.js",
+    "@microsoft/fast-element/declarative-utilities.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/declarative/utilities.js",
+    "@microsoft/fast-element/declarative.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/declarative/index.js",
+    "@microsoft/fast-element/di.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/di/di.js",
+    "@microsoft/fast-element/dom-policy.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/dom-policy.js",
+    "@microsoft/fast-element/dom.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/dom.js",
+    "@microsoft/fast-element/fast-element.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/components/fast-element.js",
+    "@microsoft/fast-element/html.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/html.js",
+    "@microsoft/fast-element/hydration.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/hydration/exports.js",
+    "@microsoft/fast-element/notifier.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/observation/notifier.js",
+    "@microsoft/fast-element/observable.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/observation/observable.js",
+    "@microsoft/fast-element/observer-map.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/declarative/observer-map.js",
+    "@microsoft/fast-element/ref.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/ref.js",
+    "@microsoft/fast-element/registry.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/registry.js",
+    "@microsoft/fast-element/render.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/render.js",
+    "@microsoft/fast-element/repeat.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/repeat.js",
+    "@microsoft/fast-element/schema.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/schema.js",
+    "@microsoft/fast-element/signal.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/binding/signal.js",
+    "@microsoft/fast-element/slotted.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/slotted.js",
+    "@microsoft/fast-element/state.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/state/exports.js",
+    "@microsoft/fast-element/two-way.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/binding/two-way.js",
+    "@microsoft/fast-element/updates.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/observation/update-queue.js",
+    "@microsoft/fast-element/utilities.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/utilities.js",
+    "@microsoft/fast-element/volatile.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/observation/volatile.js",
+    "@microsoft/fast-element/when.js": "./components/fluent/vendor/@microsoft/fast-element/dist/esm/templating/when.js",
+    "@fluentui/tokens": "./components/fluent/vendor/@fluentui/tokens/lib/index.js"
+  }
+}
+    </script>
+    <style>
+      #pyodide-status {
+        position: sticky;
+        z-index: 10000;
+        top: 0;
+        box-sizing: border-box;
+        min-height: 3rem;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #cbd5e1;
+        color: #475569;
+        background: #fffffff2;
+        font:
+          14px/1.4 system-ui,
+          sans-serif;
+        backdrop-filter: blur(12px);
+      }
+      #pyodide-error {
+        margin: 1rem;
+        color: #b91c1c;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pyodide-status">Loading Python in the browser…</div>
+    <div id="example-root"></div>
+    <pre id="pyodide-error" hidden></pre>
+    <script type="module">
+      import {
+        connectStore,
+        init,
+        mount,
+        Store,
+      } from "./runtime/spaday/cdn/index.js";
+      import "./components/fluent/cdn/index.js";
+      import * as transports from "./runtime/spaday/transports/cdn/index.js";
+
+      const status = document.querySelector("#pyodide-status");
+      const exampleName =
+        new URL(location.href).searchParams.get("example") === "gallery"
+          ? "gallery"
+          : "example";
+      document.title = `spaday-fluent ${exampleName} in Pyodide`;
+      const pendingEndpoints = new Map();
+      let nextEndpointId = 0;
+      let receiveWires = () => {};
+
+      function fail(error) {
+        status.textContent = "Unable to start";
+        const output = document.querySelector("#pyodide-error");
+        output.hidden = false;
+        output.textContent = String(error);
+      }
+
+      try {
+        await init({ module_or_path: "./runtime/spaday/pkg/spaday_bg.wasm" });
+        if (exampleName === "example") {
+          await transports.wasm.default({
+            module_or_path:
+              "./runtime/spaday/transports/pkg/transports_bg.wasm",
+          });
+        }
+
+        const worker = new Worker(
+          `./pyodide-worker.js?example=${exampleName}`,
+          { type: "module" },
+        );
+        const nativeFetch = globalThis.fetch.bind(globalThis);
+        globalThis.fetch = async (input, options = {}) => {
+          const url = new URL(
+            input instanceof Request ? input.url : input,
+            location.href,
+          );
+          if (exampleName !== "example" || !url.pathname.startsWith("/api/"))
+            return nativeFetch(input, options);
+
+          const id = ++nextEndpointId;
+          const response = new Promise((resolve) => {
+            pendingEndpoints.set(id, resolve);
+          });
+          worker.postMessage({
+            type: "endpoint",
+            id,
+            path: url.pathname,
+            body: options.body ? JSON.parse(String(options.body)) : null,
+          });
+          return response;
+        };
+
+        worker.addEventListener("message", (event) => {
+          if (event.data.type === "status")
+            status.textContent = event.data.message;
+          if (event.data.type === "error") fail(event.data.message);
+          if (event.data.type === "wires") receiveWires(event.data.wires);
+          if (event.data.type === "endpoint") {
+            receiveWires(event.data.wires);
+            const resolve = pendingEndpoints.get(event.data.id);
+            if (resolve) {
+              pendingEndpoints.delete(event.data.id);
+              resolve(
+                new Response(JSON.stringify(event.data.body), {
+                  status: event.data.status,
+                  headers: { "content-type": "application/json" },
+                }),
+              );
+            }
+          }
+          if (event.data.type === "snapshot") {
+            const {
+              tree,
+              style,
+              store: initialStore,
+              wire,
+              wires,
+            } = event.data.payload;
+            document.head.insertAdjacentHTML("beforeend", style);
+            const store = new Store(initialStore);
+            if (wire) {
+              const client = new transports.Client();
+              const link = connectStore(
+                store,
+                client,
+                (frame) => worker.postMessage({ type: "wire", frame }),
+                transports,
+              );
+              receiveWires = (frames) => {
+                for (const frame of frames) link.receive(frame);
+              };
+              receiveWires(wires);
+              window.setInterval(
+                () => worker.postMessage({ type: "flush" }),
+                100,
+              );
+            }
+            mount(document.querySelector("#example-root"), tree, store);
+            status.textContent = `Ready · Python ${exampleName} running in this browser`;
+            document.documentElement.dataset.ready = "true";
+          }
+        });
+        worker.postMessage({ type: "start" });
+      } catch (error) {
+        fail(error);
+      }
+    </script>
+  </body>
+</html>

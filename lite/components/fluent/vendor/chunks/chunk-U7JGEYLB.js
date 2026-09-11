@@ -1,0 +1,1 @@
+import{b as e}from"./chunk-IUSMEEVF.js";var p=()=>null;function r(n){return n===void 0?p:e(n)?n:()=>n}function B(n,d,m){let f=e(n)?n:()=>n,g=r(d),o=r(m);return(i,t)=>f(i,t)?g(i,t):o(i,t)}export{B as a};

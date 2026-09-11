@@ -1,0 +1,1 @@
+import{a as o}from"./chunk-XW4QLO47.js";function c(t){let i=t.ownerDocument;t?.isConnected&&t?.hasAttribute("autofocus")&&t?.checkVisibility?.({contentVisibilityAuto:!0,visibilityProperty:!0})&&[null,t,i.body,i.documentElement].includes(i.activeElement)&&o.enqueue(()=>{t.focus()})}export{c as a};

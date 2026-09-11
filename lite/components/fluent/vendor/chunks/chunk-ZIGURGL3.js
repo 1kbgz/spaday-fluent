@@ -1,0 +1,1 @@
+import{b as m}from"./chunk-CGQO6TPB.js";import{b as e}from"./chunk-55TBP5WP.js";import{f as r}from"./chunk-SIYM7N2Y.js";import{a as t}from"./chunk-FUXJWCXM.js";var p={name:r,registry:t.registry,styles:e,template:m};export{p as a};

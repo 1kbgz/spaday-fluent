@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-GTJIPQUO.js";var s=class extends r{constructor(){super(),this.elementInternals.role="radio"}disabledChanged(e,t){super.disabledChanged(e,t),this.$emit("disabled",t,{bubbles:!0})}requiredChanged(){}setFormValue(){}setValidity(){this.elementInternals.setValidity({})}toggleChecked(e=!0){super.toggleChecked(e)}};export{s as a};

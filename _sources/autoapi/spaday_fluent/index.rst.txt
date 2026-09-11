@@ -12,6 +12,7 @@ Submodules
 
    /autoapi/spaday_fluent/components/index
    /autoapi/spaday_fluent/example/index
+   /autoapi/spaday_fluent/gallery/index
 
 
 Attributes

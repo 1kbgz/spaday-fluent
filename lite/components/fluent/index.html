@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>spaday-fluent</title>
+    <meta name="description" content="Fluent for spaday" />
+    <meta name="author" content="1kbgz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/fluent.css" />
+    <script type="importmap">
+{
+  "imports": {
+    "@fluentui/web-components": "./vendor/@fluentui/web-components/dist/esm/index.js",
+    "@fluentui/web-components/web-components.js": "./vendor/@fluentui/web-components/dist/web-components.js",
+    "@fluentui/web-components/web-components.min.js": "./vendor/@fluentui/web-components/dist/web-components.min.js",
+    "@fluentui/web-components/web-components-all.js": "./vendor/@fluentui/web-components/dist/web-components-all.js",
+    "@fluentui/web-components/web-components-all.min.js": "./vendor/@fluentui/web-components/dist/web-components-all.min.js",
+    "@fluentui/web-components/utilities.js": "./vendor/@fluentui/web-components/dist/esm/utils/index.js",
+    "@fluentui/web-components/accordion.js": "./vendor/@fluentui/web-components/dist/esm/accordion/define.js",
+    "@fluentui/web-components/accordion-item.js": "./vendor/@fluentui/web-components/dist/esm/accordion-item/define.js",
+    "@fluentui/web-components/anchor-button.js": "./vendor/@fluentui/web-components/dist/esm/anchor-button/define.js",
+    "@fluentui/web-components/avatar.js": "./vendor/@fluentui/web-components/dist/esm/avatar/define.js",
+    "@fluentui/web-components/badge.js": "./vendor/@fluentui/web-components/dist/esm/badge/define.js",
+    "@fluentui/web-components/button.js": "./vendor/@fluentui/web-components/dist/esm/button/define.js",
+    "@fluentui/web-components/checkbox.js": "./vendor/@fluentui/web-components/dist/esm/checkbox/define.js",
+    "@fluentui/web-components/compound-button.js": "./vendor/@fluentui/web-components/dist/esm/compound-button/define.js",
+    "@fluentui/web-components/counter-badge.js": "./vendor/@fluentui/web-components/dist/esm/counter-badge/define.js",
+    "@fluentui/web-components/dialog.js": "./vendor/@fluentui/web-components/dist/esm/dialog/define.js",
+    "@fluentui/web-components/dialog-body.js": "./vendor/@fluentui/web-components/dist/esm/dialog-body/define.js",
+    "@fluentui/web-components/divider.js": "./vendor/@fluentui/web-components/dist/esm/divider/define.js",
+    "@fluentui/web-components/drawer.js": "./vendor/@fluentui/web-components/dist/esm/drawer/define.js",
+    "@fluentui/web-components/drawer-body.js": "./vendor/@fluentui/web-components/dist/esm/drawer-body/define.js",
+    "@fluentui/web-components/dropdown.js": "./vendor/@fluentui/web-components/dist/esm/dropdown/define.js",
+    "@fluentui/web-components/field.js": "./vendor/@fluentui/web-components/dist/esm/field/define.js",
+    "@fluentui/web-components/image.js": "./vendor/@fluentui/web-components/dist/esm/image/define.js",
+    "@fluentui/web-components/label.js": "./vendor/@fluentui/web-components/dist/esm/label/define.js",
+    "@fluentui/web-components/link.js": "./vendor/@fluentui/web-components/dist/esm/link/define.js",
+    "@fluentui/web-components/listbox.js": "./vendor/@fluentui/web-components/dist/esm/listbox/define.js",
+    "@fluentui/web-components/menu.js": "./vendor/@fluentui/web-components/dist/esm/menu/define.js",
+    "@fluentui/web-components/menu-button.js": "./vendor/@fluentui/web-components/dist/esm/menu-button/define.js",
+    "@fluentui/web-components/menu-item.js": "./vendor/@fluentui/web-components/dist/esm/menu-item/define.js",
+    "@fluentui/web-components/menu-list.js": "./vendor/@fluentui/web-components/dist/esm/menu-list/define.js",
+    "@fluentui/web-components/message-bar.js": "./vendor/@fluentui/web-components/dist/esm/message-bar/define.js",
+    "@fluentui/web-components/option.js": "./vendor/@fluentui/web-components/dist/esm/option/define.js",
+    "@fluentui/web-components/progress-bar.js": "./vendor/@fluentui/web-components/dist/esm/progress-bar/define.js",
+    "@fluentui/web-components/radio.js": "./vendor/@fluentui/web-components/dist/esm/radio/define.js",
+    "@fluentui/web-components/radio-group.js": "./vendor/@fluentui/web-components/dist/esm/radio-group/define.js",
+    "@fluentui/web-components/rating-display.js": "./vendor/@fluentui/web-components/dist/esm/rating-display/define.js",
+    "@fluentui/web-components/slider.js": "./vendor/@fluentui/web-components/dist/esm/slider/define.js",
+    "@fluentui/web-components/spinner.js": "./vendor/@fluentui/web-components/dist/esm/spinner/define.js",
+    "@fluentui/web-components/switch.js": "./vendor/@fluentui/web-components/dist/esm/switch/define.js",
+    "@fluentui/web-components/tab.js": "./vendor/@fluentui/web-components/dist/esm/tab/define.js",
+    "@fluentui/web-components/tablist.js": "./vendor/@fluentui/web-components/dist/esm/tablist/define.js",
+    "@fluentui/web-components/text.js": "./vendor/@fluentui/web-components/dist/esm/text/define.js",
+    "@fluentui/web-components/text-input.js": "./vendor/@fluentui/web-components/dist/esm/text-input/define.js",
+    "@fluentui/web-components/textarea.js": "./vendor/@fluentui/web-components/dist/esm/textarea/define.js",
+    "@fluentui/web-components/toggle-button.js": "./vendor/@fluentui/web-components/dist/esm/toggle-button/define.js",
+    "@fluentui/web-components/tooltip.js": "./vendor/@fluentui/web-components/dist/esm/tooltip/define.js",
+    "@fluentui/web-components/tree.js": "./vendor/@fluentui/web-components/dist/esm/tree/define.js",
+    "@fluentui/web-components/tree-item.js": "./vendor/@fluentui/web-components/dist/esm/tree-item/define.js",
+    "@fluentui/web-components/": "./vendor/@fluentui/web-components/dist/esm/",
+    "@microsoft/fast-element": "./vendor/@microsoft/fast-element/dist/esm/index.js",
+    "@microsoft/fast-element/arrays.js": "./vendor/@microsoft/fast-element/dist/esm/observation/arrays.js",
+    "@microsoft/fast-element/attr.js": "./vendor/@microsoft/fast-element/dist/esm/components/attributes.js",
+    "@microsoft/fast-element/attribute-map.js": "./vendor/@microsoft/fast-element/dist/esm/declarative/attribute-map.js",
+    "@microsoft/fast-element/binding.js": "./vendor/@microsoft/fast-element/dist/esm/binding/exports.js",
+    "@microsoft/fast-element/children.js": "./vendor/@microsoft/fast-element/dist/esm/templating/children.js",
+    "@microsoft/fast-element/context.js": "./vendor/@microsoft/fast-element/dist/esm/context.js",
+    "@microsoft/fast-element/css.js": "./vendor/@microsoft/fast-element/dist/esm/styles/css.js",
+    "@microsoft/fast-element/debug.js": "./vendor/@microsoft/fast-element/dist/esm/debug.js",
+    "@microsoft/fast-element/declarative-utilities.js": "./vendor/@microsoft/fast-element/dist/esm/declarative/utilities.js",
+    "@microsoft/fast-element/declarative.js": "./vendor/@microsoft/fast-element/dist/esm/declarative/index.js",
+    "@microsoft/fast-element/di.js": "./vendor/@microsoft/fast-element/dist/esm/di/di.js",
+    "@microsoft/fast-element/dom-policy.js": "./vendor/@microsoft/fast-element/dist/esm/dom-policy.js",
+    "@microsoft/fast-element/dom.js": "./vendor/@microsoft/fast-element/dist/esm/dom.js",
+    "@microsoft/fast-element/fast-element.js": "./vendor/@microsoft/fast-element/dist/esm/components/fast-element.js",
+    "@microsoft/fast-element/html.js": "./vendor/@microsoft/fast-element/dist/esm/templating/html.js",
+    "@microsoft/fast-element/hydration.js": "./vendor/@microsoft/fast-element/dist/esm/hydration/exports.js",
+    "@microsoft/fast-element/notifier.js": "./vendor/@microsoft/fast-element/dist/esm/observation/notifier.js",
+    "@microsoft/fast-element/observable.js": "./vendor/@microsoft/fast-element/dist/esm/observation/observable.js",
+    "@microsoft/fast-element/observer-map.js": "./vendor/@microsoft/fast-element/dist/esm/declarative/observer-map.js",
+    "@microsoft/fast-element/ref.js": "./vendor/@microsoft/fast-element/dist/esm/templating/ref.js",
+    "@microsoft/fast-element/registry.js": "./vendor/@microsoft/fast-element/dist/esm/registry.js",
+    "@microsoft/fast-element/render.js": "./vendor/@microsoft/fast-element/dist/esm/render.js",
+    "@microsoft/fast-element/repeat.js": "./vendor/@microsoft/fast-element/dist/esm/templating/repeat.js",
+    "@microsoft/fast-element/schema.js": "./vendor/@microsoft/fast-element/dist/esm/schema.js",
+    "@microsoft/fast-element/signal.js": "./vendor/@microsoft/fast-element/dist/esm/binding/signal.js",
+    "@microsoft/fast-element/slotted.js": "./vendor/@microsoft/fast-element/dist/esm/templating/slotted.js",
+    "@microsoft/fast-element/state.js": "./vendor/@microsoft/fast-element/dist/esm/state/exports.js",
+    "@microsoft/fast-element/two-way.js": "./vendor/@microsoft/fast-element/dist/esm/binding/two-way.js",
+    "@microsoft/fast-element/updates.js": "./vendor/@microsoft/fast-element/dist/esm/observation/update-queue.js",
+    "@microsoft/fast-element/utilities.js": "./vendor/@microsoft/fast-element/dist/esm/utilities.js",
+    "@microsoft/fast-element/volatile.js": "./vendor/@microsoft/fast-element/dist/esm/observation/volatile.js",
+    "@microsoft/fast-element/when.js": "./vendor/@microsoft/fast-element/dist/esm/templating/when.js",
+    "@fluentui/tokens": "./vendor/@fluentui/tokens/lib/index.js"
+  }
+}
+    </script>
+    <script type="module" src="cdn/index.js"></script>
+  </head>
+  <body></body>
+</html>

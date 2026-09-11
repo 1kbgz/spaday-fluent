@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-FUXJWCXM.js";var s={subtle:"subtle",subtleAlpha:"subtle-alpha",transparent:"transparent"},m={small:"small",medium:"medium"};function n(e,r="-tree-item"){return e?.nodeType!==Node.ELEMENT_NODE?!1:e.tagName.toLowerCase().endsWith(r)}var o=`${t.prefix}-tree-item`;export{s as a,m as b,n as c,o as d};

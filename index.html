@@ -202,9 +202,11 @@
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_all/index.html">test_all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/integration/index.html">integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_example/index.html">test_example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/test_gallery/index.html">test_gallery</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="autoapi/spaday_fluent/index.html">spaday_fluent</a><input aria-label="Toggle navigation of spaday_fluent" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_fluent/components/index.html">spaday_fluent.components</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_fluent/example/index.html">spaday_fluent.example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_fluent/gallery/index.html">spaday_fluent.gallery</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_versions/index.html">test_versions</a></li>
@@ -257,7 +259,7 @@
 <a class="reference external" href="https://codecov.io/gh/1kbgz/spaday-fluent"><img alt="codecov" src="https://codecov.io/gh/1kbgz/spaday-fluent/branch/main/graph/badge.svg" /></a>
 <a class="reference external" href="https://github.com/1kbgz/spaday-fluent"><img alt="License" src="https://img.shields.io/github/license/1kbgz/spaday-fluent" /></a>
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-fluent"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-fluent.svg" /></a></p>
-<p><a class="reference download internal" download="" href="_downloads/646b3fa200e2b37d996087a0191378ec/example.py"><span class="xref download myst"><img alt="Preview of fluent components in spaday rendering a sprint hub" src="https://raw.githubusercontent.com/1kbgz/spaday-fluent/main/docs/img/preview.webp" /></span></a></p>
+<p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/"><img alt="Preview of Fluent components in spaday rendering a sprint hub" src="https://raw.githubusercontent.com/1kbgz/spaday-fluent/main/docs/img/preview.webp" /></a></p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetField</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">serve</span>
@@ -275,17 +277,28 @@ Manifest, so props, events and slots are checked when you author the tree; enum 
 <code class="docutils literal notranslate"><span class="pre">appearance</span></code> carry their choices. Installing the package does not inject assets; select it with
 <code class="docutils literal notranslate"><span class="pre">packages=[&quot;fluent&quot;]</span></code> or pass the exported <code class="docutils literal notranslate"><span class="pre">package</span></code> descriptor.</p>
 </section>
-<section id="run-the-local-example">
-<h2>Run the local example<a class="headerlink" href="#run-the-local-example" title="Link to this heading">¶</a></h2>
+<section id="browser-examples">
+<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/">Open the standard app</a> (<a class="reference download internal" download="" href="_downloads/646b3fa200e2b37d996087a0191378ec/example.py"><span class="xref download myst">source</span></a>).</p></li>
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/?example=gallery">Open the complete component gallery</a> (<a class="reference download internal" download="" href="_downloads/e9757a195934209b02adf87bede81fdc/gallery.py"><span class="xref download myst">source</span></a>).</p></li>
+</ul>
+<p>Both run Python locally through Pyodide; no install or server is required.</p>
+</section>
+<section id="run-examples-locally">
+<h2>Run examples locally<a class="headerlink" href="#run-examples-locally" title="Link to this heading">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[examples]"</span>
 python<span class="w"> </span>-m<span class="w"> </span>spaday_fluent.example
+python<span class="w"> </span>-m<span class="w"> </span>spaday_fluent.gallery
 </pre></div>
 </div>
-<p>Open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8024</span></code> for the <a class="reference download internal" download="" href="_downloads/646b3fa200e2b37d996087a0191378ec/example.py"><span class="xref download myst">sprint hub</span></a>: a task board streamed from
-Python over transports with progress bars, badges and avatars, tasks closed through a Python endpoint, an
-activity drawer, a team accordion whose presence updates live, a task form of text input, dropdown, radio
-group, slider, text area and checkbox bound to spaday state and confirmed in a dialog, tabs, a tooltip,
-and a dark switch that re-themes Fluent and the spaday shell together.</p>
+<p>Open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8024</span></code> for the standard sprint-command-center app or <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8025</span></code> for the
+component gallery. The standard app includes a task board streamed from Python, endpoint-backed task
+creation and completion, live activity and presence, bound forms, tabs, overlays, and shared dark-theme
+state. The gallery includes every generated Fluent component and a highlighted Python snippet for each
+component family.</p>
+<p>Both pass the local package descriptor directly, so they do not install or resolve the integration from
+GitHub.</p>
 </section>
 <section id="theming">
 <h2>Theming<a class="headerlink" href="#theming" title="Link to this heading">¶</a></h2>

@@ -1,0 +1,1 @@
+import{a as l}from"./chunk-P326MSZE.js";import{b as e}from"./chunk-JB4YKTVJ.js";import{e as o}from"./chunk-IQAG6JCP.js";var r=class{},s=class{},n=class{};function p(t){return o` <slot name="end" ${e("end")}>${l(t.end)}</slot> `.inline()}function i(t){return o` <slot name="start" ${e("start")}>${l(t.start)}</slot> `.inline()}export{r as a,s as b,n as c,p as d,i as e};
