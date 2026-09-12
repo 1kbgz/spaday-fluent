@@ -693,12 +693,15 @@ backlog feeds new tasks in, and people come and go.</p>
 <span class="sd">    box-shadow: var(--shadow8); }</span>
 <span class="sd">  .stat-label { color: var(--colorNeutralForeground3); }</span>
 <span class="sd">  .board, .members { display: grid; gap: .5rem; }</span>
+<span class="sd">  .members { box-sizing: border-box; width: min(100%, 28rem); gap: .75rem; padding: .5rem; }</span>
 <span class="sd">  .task { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;</span>
 <span class="sd">    border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusLarge); background: var(--colorNeutralBackground1);</span>
 <span class="sd">    box-shadow: var(--shadow2); transition: transform .18s ease, box-shadow .18s ease; }</span>
 <span class="sd">  .task:hover { transform: translateY(-1px); box-shadow: var(--shadow8); }</span>
 <span class="sd">  .task-main { display: grid; gap: .25rem; min-width: 0; }</span>
+<span class="sd">  .member, .member fluent-text { min-width: 0; }</span>
 <span class="sd">  .member { display: flex; align-items: center; gap: .75rem; }</span>
+<span class="sd">  .member fluent-text { overflow-wrap: anywhere; }</span>
 <span class="sd">  .member fluent-badge { margin-left: auto; }</span>
 <span class="sd">  .team, .new-task { padding: 1.2rem; border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusXLarge);</span>
 <span class="sd">    background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); }</span>

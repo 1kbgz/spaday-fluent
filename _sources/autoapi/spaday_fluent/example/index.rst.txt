@@ -288,12 +288,15 @@ Module Contents
           box-shadow: var(--shadow8); }
         .stat-label { color: var(--colorNeutralForeground3); }
         .board, .members { display: grid; gap: .5rem; }
+        .members { box-sizing: border-box; width: min(100%, 28rem); gap: .75rem; padding: .5rem; }
         .task { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;
           border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusLarge); background: var(--colorNeutralBackground1);
           box-shadow: var(--shadow2); transition: transform .18s ease, box-shadow .18s ease; }
         .task:hover { transform: translateY(-1px); box-shadow: var(--shadow8); }
         .task-main { display: grid; gap: .25rem; min-width: 0; }
+        .member, .member fluent-text { min-width: 0; }
         .member { display: flex; align-items: center; gap: .75rem; }
+        .member fluent-text { overflow-wrap: anywhere; }
         .member fluent-badge { margin-left: auto; }
         .team, .new-task { padding: 1.2rem; border: 1px solid var(--colorNeutralStroke2); border-radius: var(--borderRadiusXLarge);
           background: var(--colorNeutralBackground1); box-shadow: var(--shadow4); }
