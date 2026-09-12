@@ -42,6 +42,51 @@ test("tabs show one panel at a time", async ({ page }) => {
   await expect(page.locator("#team")).toContainText("Grace Hopper");
 });
 
+test("team avatars and labels stay aligned on narrow screens", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 800 });
+  await page.goto(PAGE);
+  await page.locator("#team-tab").click();
+
+  const geometry = await page
+    .locator(".members")
+    .first()
+    .evaluate((members) => {
+      const bounds = members.getBoundingClientRect();
+      const rows = [...members.querySelectorAll(".member")].map((row) => {
+        const rowBounds = row.getBoundingClientRect();
+        const nameBounds = row
+          .querySelector("fluent-text")
+          .getBoundingClientRect();
+        const badgeBounds = row
+          .querySelector("fluent-badge")
+          .getBoundingClientRect();
+        return {
+          top: rowBounds.top,
+          bottom: rowBounds.bottom,
+          nameLeft: nameBounds.left,
+          badgeRight: badgeBounds.right,
+        };
+      });
+      return {
+        topInset: rows[0].top - bounds.top,
+        bottomInset: bounds.bottom - rows.at(-1).bottom,
+        rowGaps: rows
+          .slice(1)
+          .map((row, index) => row.top - rows[index].bottom),
+        nameLefts: rows.map((row) => Math.round(row.nameLeft)),
+        badgeRights: rows.map((row) => Math.round(row.badgeRight)),
+      };
+    });
+
+  expect(geometry.topInset).toBeGreaterThanOrEqual(8);
+  expect(geometry.bottomInset).toBeGreaterThanOrEqual(8);
+  expect(Math.min(...geometry.rowGaps)).toBeGreaterThanOrEqual(12);
+  expect(new Set(geometry.nameLefts).size).toBe(1);
+  expect(new Set(geometry.badgeRights).size).toBe(1);
+});
+
 test("creates a task from the form and confirms it in a dialog", async ({
   page,
 }) => {
