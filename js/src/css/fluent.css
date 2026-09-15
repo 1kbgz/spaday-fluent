@@ -20,3 +20,7 @@ spa-app,
   --spa-warning: var(--colorStatusWarningBackground3);
   --spa-danger: var(--colorStatusDangerBackground3);
 }
+
+.ui-error {
+  color: var(--colorPaletteRedForeground1, #b10e1c);
+}

@@ -27,29 +27,13 @@ Manifest, so props, events and slots are checked when you author the tree; enum 
 `appearance` carry their choices. Installing the package does not inject assets; select it with
 `packages=["fluent"]` or pass the exported `package` descriptor.
 
-## Browser examples
+## Generic controls
 
-- [Open the standard app](https://1kbgz.github.io/spaday-fluent/lite/) ([source](spaday_fluent/example.py)).
-- [Open the complete component gallery](https://1kbgz.github.io/spaday-fluent/lite/?example=gallery) ([source](spaday_fluent/gallery.py)).
-
-Both run Python locally through Pyodide; no install or server is required.
-
-## Run examples locally
-
-```bash
-python -m pip install -e ".[examples]"
-python -m spaday_fluent.example
-python -m spaday_fluent.gallery
-```
-
-Open `http://127.0.0.1:8024` for the standard sprint-command-center app or `http://127.0.0.1:8025` for the
-component gallery. The standard app includes a task board streamed from Python, endpoint-backed task
-creation and completion, live activity and presence, bound forms, tabs, overlays, and shared dark-theme
-state. The gallery includes every generated Fluent component and a highlighted Python snippet for each
-component family.
-
-Both pass the local package descriptor directly, so they do not install or resolve the integration from
-GitHub.
+Eleven of the 13 generic controls in `spaday.ui` render as Fluent elements when a page selects this
+package. Fluent Web Components 3.1.3 has no number or date control, so `NumberInput` and `DateInput`
+use spaday's marked native fallback. The mapping is exported as `DESIGN`; the shared conformance page
+checks every control, value updates, visible radio labels, validation state, and dialog behavior in a
+browser.
 
 ## Theming
 
@@ -75,6 +59,30 @@ with `@microsoft/fast-element`, which a library extending Fluent's classes has t
 `@fluentui/tokens`, through the page's import map. A library built on Fluent that leaves those
 imports out of its bundle (`external: ["@fluentui/web-components", "@microsoft/fast-element"]` with
 esbuild) gets this copy, and nothing registers twice.
+
+## Browser examples
+
+- [Open the standard app](https://1kbgz.github.io/spaday-fluent/lite/) ([source](spaday_fluent/example.py)).
+- [Open the complete component gallery](https://1kbgz.github.io/spaday-fluent/lite/?example=gallery) ([source](spaday_fluent/gallery.py)).
+
+Both run Python locally through Pyodide; no install or server is required.
+
+## Run examples locally
+
+```bash
+python -m pip install -e ".[examples]"
+python -m spaday_fluent.example
+python -m spaday_fluent.gallery
+```
+
+Open `http://127.0.0.1:8024` for the standard sprint-command-center app or `http://127.0.0.1:8025` for the
+component gallery. The standard app includes a task board streamed from Python, endpoint-backed task
+creation and completion, live activity and presence, bound forms, tabs, overlays, and shared dark-theme
+state. The gallery includes every generated Fluent component and a highlighted Python snippet for each
+component family.
+
+Both pass the local package descriptor directly, so they do not install or resolve the integration from
+GitHub.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
