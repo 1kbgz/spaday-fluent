@@ -114,7 +114,9 @@ def test_toggles_slider_feedback_and_dialog_map_to_fluent():
     assert _props(button) == {"textContent": "Save", "appearance": "subtle", "size": "large"}
 
     checkbox = resolve(Checkbox(label="Agree").bind("value", "agree", mode="two-way").to_node(), DESIGN)
-    assert _find(checkbox, "fluent-checkbox")["bindings"] == {"checked": {"field": "agree", "mode": "two-way"}}
+    checkbox = _find(checkbox, "fluent-checkbox")
+    assert checkbox["bindings"]["checked"] == {"field": "agree", "mode": "two-way"}
+    assert checkbox["bindings"]["aria-invalid"]["compute"]["test"] == {"expr": "field", "name": "$errors.agree"}
 
     slider = resolve(Slider(label="Volume", min=0, max=10, step=1).bind("value", "volume", mode="two-way").to_node(), DESIGN)
     assert _props(_find(slider, "fluent-slider")) == {"min": 0, "max": 10, "step": 1, "slot": "input"}
