@@ -1,4 +1,9 @@
-# spaday-fluent
+<a href="https://github.com/1kbgz/spaday-fluent">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1kbgz/spaday-fluent/raw/main/docs/img/logo-dark.webp?raw=true">
+    <img alt="spaday-fluent logo, Fluent 2 mark inside a browser window" src="https://github.com/1kbgz/spaday-fluent/raw/main/docs/img/logo-light.webp?raw=true" width="1200">
+  </picture>
+</a>
 
 Typed [Fluent UI web components](https://github.com/microsoft/fluentui/tree/master/packages/web-components) and browser assets for [spaday](https://github.com/1kbgz/spaday).
 
