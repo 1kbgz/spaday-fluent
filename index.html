@@ -252,8 +252,12 @@
         <article role="main" id="furo-main-content">
           <div class="toctree-wrapper compound">
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="spaday-fluent">
-<h1>spaday-fluent<a class="headerlink" href="#spaday-fluent" title="Link to this heading">¶</a></h1>
+<a href="https://github.com/1kbgz/spaday-fluent">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1kbgz/spaday-fluent/raw/main/docs/img/logo-dark.webp?raw=true">
+    <img alt="spaday-fluent logo, Fluent 2 mark inside a browser window" src="https://github.com/1kbgz/spaday-fluent/raw/main/docs/img/logo-light.webp?raw=true" width="700">
+  </picture>
+</a>
 <p>Typed <a class="reference external" href="https://github.com/microsoft/fluentui/tree/master/packages/web-components">Fluent UI web components</a> and browser assets for <a class="reference external" href="https://github.com/1kbgz/spaday">spaday</a>.</p>
 <p><a class="reference external" href="https://github.com/1kbgz/spaday-fluent/actions/workflows/build.yaml"><img alt="Build Status" src="https://github.com/1kbgz/spaday-fluent/actions/workflows/build.yaml/badge.svg?branch=main&amp;event=push" /></a>
 <a class="reference external" href="https://codecov.io/gh/1kbgz/spaday-fluent"><img alt="codecov" src="https://codecov.io/gh/1kbgz/spaday-fluent/branch/main/graph/badge.svg" /></a>
@@ -261,7 +265,7 @@
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-fluent"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-fluent.svg" /></a></p>
 <p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/"><img alt="Preview of Fluent components in spaday rendering a sprint hub" src="https://raw.githubusercontent.com/1kbgz/spaday-fluent/main/docs/img/preview.webp" /></a></p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetField</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">serve</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">spaday_fluent</span><span class="w"> </span><span class="kn">import</span> <span class="n">FluentBadge</span><span class="p">,</span> <span class="n">FluentButton</span>
 
@@ -278,7 +282,7 @@ Manifest, so props, events and slots are checked when you author the tree; enum 
 <code class="docutils literal notranslate"><span class="pre">packages=[&quot;fluent&quot;]</span></code> or pass the exported <code class="docutils literal notranslate"><span class="pre">package</span></code> descriptor.</p>
 </section>
 <section id="browser-examples">
-<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
+<h1>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/">Open the standard app</a> (<a class="reference download internal" download="" href="_downloads/646b3fa200e2b37d996087a0191378ec/example.py"><span class="xref download myst">source</span></a>).</p></li>
 <li><p><a class="reference external" href="https://1kbgz.github.io/spaday-fluent/lite/?example=gallery">Open the complete component gallery</a> (<a class="reference download internal" download="" href="_downloads/e9757a195934209b02adf87bede81fdc/gallery.py"><span class="xref download myst">source</span></a>).</p></li>
@@ -286,7 +290,7 @@ Manifest, so props, events and slots are checked when you author the tree; enum 
 <p>Both run Python locally through Pyodide; no install or server is required.</p>
 </section>
 <section id="run-examples-locally">
-<h2>Run examples locally<a class="headerlink" href="#run-examples-locally" title="Link to this heading">¶</a></h2>
+<h1>Run examples locally<a class="headerlink" href="#run-examples-locally" title="Link to this heading">¶</a></h1>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[examples]"</span>
 python<span class="w"> </span>-m<span class="w"> </span>spaday_fluent.example
 python<span class="w"> </span>-m<span class="w"> </span>spaday_fluent.gallery
@@ -301,7 +305,7 @@ component family.</p>
 GitHub.</p>
 </section>
 <section id="theming">
-<h2>Theming<a class="headerlink" href="#theming" title="Link to this heading">¶</a></h2>
+<h1>Theming<a class="headerlink" href="#theming" title="Link to this heading">¶</a></h1>
 <p>Fluent’s design tokens are CSS custom properties. The stylesheet carries Fluent’s light and dark
 themes and maps spaday’s <code class="docutils literal notranslate"><span class="pre">--spa-*</span></code> shell palette onto them, so restyling Fluent restyles the shell
 and every other spaday component package with it. <code class="docutils literal notranslate"><span class="pre">TOKENS</span></code> lists the Fluent tokens wired to the
@@ -314,7 +318,7 @@ palette, each settable through <code class="docutils literal notranslate"><span 
 nested island back. A theme applied with Fluent’s own <code class="docutils literal notranslate"><span class="pre">setTheme()</span></code> takes precedence.</p>
 </section>
 <section id="sharing-fluent-with-your-own-library">
-<h2>Sharing Fluent with your own library<a class="headerlink" href="#sharing-fluent-with-your-own-library" title="Link to this heading">¶</a></h2>
+<h1>Sharing Fluent with your own library<a class="headerlink" href="#sharing-fluent-with-your-own-library" title="Link to this heading">¶</a></h1>
 <p>Fluent registers global custom element names, so a second copy on the page throws from
 <code class="docutils literal notranslate"><span class="pre">customElements.define</span></code>. The package serves Fluent’s modules under their own bare specifiers —
 <code class="docutils literal notranslate"><span class="pre">&#64;fluentui/web-components</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;fluentui/web-components/button.js</span></code> and the rest of its exports — along
@@ -326,7 +330,6 @@ esbuild) gets this copy, and nothing registers twice.</p>
 <p class="admonition-title">Note</p>
 <p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>
 </div>
-</section>
 </section>
 
         </article>
