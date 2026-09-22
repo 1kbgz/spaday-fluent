@@ -1,0 +1,40 @@
+test_design
+===========
+
+.. py:module:: test_design
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_design._props
+   test_design._find
+   test_design.test_the_package_publishes_its_design
+   test_design.test_fields_render_with_fluent_composition
+   test_design.test_choices_render_real_fluent_options_with_visible_radio_labels
+   test_design.test_toggles_slider_feedback_and_dialog_map_to_fluent
+   test_design.test_number_and_date_use_the_explicit_native_fallback
+   test_design.test_the_conformance_page_resolves_and_validates
+
+
+Module Contents
+---------------
+
+.. py:function:: _props(node: dict) -> dict
+
+.. py:function:: _find(node: dict, tag: str) -> dict
+
+.. py:function:: test_the_package_publishes_its_design()
+
+.. py:function:: test_fields_render_with_fluent_composition()
+
+.. py:function:: test_choices_render_real_fluent_options_with_visible_radio_labels()
+
+.. py:function:: test_toggles_slider_feedback_and_dialog_map_to_fluent()
+
+.. py:function:: test_number_and_date_use_the_explicit_native_fallback()
+
+.. py:function:: test_the_conformance_page_resolves_and_validates()
+

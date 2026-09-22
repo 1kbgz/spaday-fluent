@@ -1,0 +1,24 @@
+spaday_fluent.design
+====================
+
+.. py:module:: spaday_fluent.design
+
+.. autoapi-nested-parse::
+
+   How Fluent renders spaday's generic controls (:mod:`spaday.ui`).
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_fluent.design.DESIGN
+
+
+Module Contents
+---------------
+
+.. py:data:: DESIGN
+

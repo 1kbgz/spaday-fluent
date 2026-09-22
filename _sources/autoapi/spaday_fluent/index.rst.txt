@@ -11,6 +11,7 @@ Submodules
    :maxdepth: 1
 
    /autoapi/spaday_fluent/components/index
+   /autoapi/spaday_fluent/design/index
    /autoapi/spaday_fluent/example/index
    /autoapi/spaday_fluent/gallery/index
 
@@ -20,6 +21,7 @@ Attributes
 
 .. autoapisummary::
 
+   spaday_fluent.DESIGN
    spaday_fluent.package
    spaday_fluent.TOKENS
 
@@ -747,6 +749,8 @@ Package Contents
 
    .. py:attribute:: schema
 
+
+.. py:data:: DESIGN
 
 .. py:data:: package
 
