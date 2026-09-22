@@ -34,6 +34,12 @@ export default defineConfig({
       ? []
       : [
           {
+            command: "python -m spaday.ui.conformance 8032 --package fluent",
+            url: "http://127.0.0.1:8032",
+            reuseExistingServer: !process.env.CI,
+            timeout: 120 * 1000,
+          },
+          {
             command: "python -m spaday_fluent.example",
             url: "http://127.0.0.1:8024",
             reuseExistingServer: !process.env.CI,
