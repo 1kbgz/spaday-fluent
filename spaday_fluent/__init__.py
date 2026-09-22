@@ -8,7 +8,7 @@ from .components import *
 from .components import __all__ as _component_names
 from .design import DESIGN
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 _EXTENSION = Path(__file__).parent / "extension"
 # Fluent's modules (and the FAST runtime they are built on) under their own bare specifiers, written
