@@ -1,14 +1,14 @@
 import json
 from pathlib import Path
 
-from spaday import ComponentPackage
+from spaday import ComponentPackage, Token
 
 from . import components as _components
 from .components import *
 from .components import __all__ as _component_names
 from .design import DESIGN
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 _EXTENSION = Path(__file__).parent / "extension"
 # Fluent's modules (and the FAST runtime they are built on) under their own bare specifiers, written
@@ -42,14 +42,14 @@ package = ComponentPackage(
 #: Every other Fluent token works the same way (``css()`` takes arbitrary custom properties, and
 #: Fluent's are camelCase); these are the ones wired to the shell palette.
 TOKENS = {
-    "colorNeutralBackground1": ("--colorNeutralBackground1", "drives --spa-surface"),
-    "colorNeutralBackground2": ("--colorNeutralBackground2", "drives --spa-surface-2"),
-    "colorNeutralStroke1": ("--colorNeutralStroke1", "drives --spa-border"),
-    "colorNeutralForeground3": ("--colorNeutralForeground3", "drives --spa-muted"),
-    "colorBrandBackground": ("--colorBrandBackground", "drives --spa-accent and --spa-info"),
-    "colorStatusSuccessBackground3": ("--colorStatusSuccessBackground3", "drives --spa-success"),
-    "colorStatusWarningBackground3": ("--colorStatusWarningBackground3", "drives --spa-warning"),
-    "colorStatusDangerBackground3": ("--colorStatusDangerBackground3", "drives --spa-danger"),
+    "colorNeutralBackground1": Token("--colorNeutralBackground1", "drives --spa-surface"),
+    "colorNeutralBackground2": Token("--colorNeutralBackground2", "drives --spa-surface-2"),
+    "colorNeutralStroke1": Token("--colorNeutralStroke1", "drives --spa-border"),
+    "colorNeutralForeground3": Token("--colorNeutralForeground3", "drives --spa-muted"),
+    "colorBrandBackground": Token("--colorBrandBackground", "drives --spa-accent and --spa-info"),
+    "colorStatusSuccessBackground3": Token("--colorStatusSuccessBackground3", "drives --spa-success"),
+    "colorStatusWarningBackground3": Token("--colorStatusWarningBackground3", "drives --spa-warning"),
+    "colorStatusDangerBackground3": Token("--colorStatusDangerBackground3", "drives --spa-danger"),
 }
 
 __all__ = [*_component_names, "DESIGN", "TOKENS", "package"]  # noqa: PLE0604

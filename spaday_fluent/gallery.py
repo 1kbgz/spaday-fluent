@@ -327,7 +327,8 @@ navigation = _section(
     ),
     _demo(
         "Tree",
-        "Represent nested project structure with selectable branches.",
+        "Represent nested project structure with selectable branches. Repeated tree items need "
+        "Each(..., direct=True) because Fluent discovers nesting from direct light-DOM children.",
         _snippet(
             "FluentTree, FluentTreeItem",
             """
