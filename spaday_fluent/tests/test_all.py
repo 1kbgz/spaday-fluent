@@ -49,6 +49,9 @@ def test_tokens_are_fluent_tokens_the_css_kwarg_produces():
         assert prop == f"--{kwarg}" and description.startswith("drives --spa-")
         assert element("div").css(**{kwarg: "x"}).to_node()["props"]["style"]["Str"] == f"{prop}: x"
 
+    css = (ROOT.parent / "js/src/css/fluent.css").read_text(encoding="utf-8")
+    assert "--spa-text: var(--colorNeutralForeground1);" in css
+
 
 def test_generated_catalog_is_current():
     fresh = generate(str(ROOT / "custom-elements.json"))

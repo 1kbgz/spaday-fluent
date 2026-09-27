@@ -45,6 +45,7 @@ TOKENS = {
     "colorNeutralBackground1": Token("--colorNeutralBackground1", "drives --spa-surface"),
     "colorNeutralBackground2": Token("--colorNeutralBackground2", "drives --spa-surface-2"),
     "colorNeutralStroke1": Token("--colorNeutralStroke1", "drives --spa-border"),
+    "colorNeutralForeground1": Token("--colorNeutralForeground1", "drives --spa-text"),
     "colorNeutralForeground3": Token("--colorNeutralForeground3", "drives --spa-muted"),
     "colorBrandBackground": Token("--colorBrandBackground", "drives --spa-accent and --spa-info"),
     "colorStatusSuccessBackground3": Token("--colorStatusSuccessBackground3", "drives --spa-success"),

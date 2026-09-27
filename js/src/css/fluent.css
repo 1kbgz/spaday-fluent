@@ -13,6 +13,7 @@ spa-app,
   --spa-surface: var(--colorNeutralBackground1);
   --spa-surface-2: var(--colorNeutralBackground2);
   --spa-border: var(--colorNeutralStroke1);
+  --spa-text: var(--colorNeutralForeground1);
   --spa-muted: var(--colorNeutralForeground3);
   --spa-accent: var(--colorBrandBackground);
   --spa-info: var(--colorBrandBackground);
