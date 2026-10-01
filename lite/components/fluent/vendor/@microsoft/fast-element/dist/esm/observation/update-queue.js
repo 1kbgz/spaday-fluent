@@ -1,1 +1,1 @@
-import{a}from"../../../../../chunks/chunk-XW4QLO47.js";export{a as Updates};
+import{a}from"../../../../../chunks/chunk-DHTP2C3A.js";export{a as Updates};

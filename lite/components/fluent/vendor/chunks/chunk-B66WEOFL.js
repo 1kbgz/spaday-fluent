@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-F6F2MI7Y.js";import{a as e}from"./chunk-2JM5GVQW.js";var a={above:"above",after:"after",before:"before"},n=`${e.prefix}-switch`;var o=class extends t{constructor(){super(),this.elementInternals.role="switch"}};export{a,n as b,o as c};

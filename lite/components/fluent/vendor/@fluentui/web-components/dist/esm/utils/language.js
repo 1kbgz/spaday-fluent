@@ -1,1 +1,1 @@
-import{a}from"../../../../../chunks/chunk-2LEA2LG4.js";export{a as getLanguage};
+import{a}from"../../../../../chunks/chunk-PHYKSVL3.js";export{a as getLanguage};

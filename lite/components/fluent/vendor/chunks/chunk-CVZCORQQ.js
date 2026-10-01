@@ -1,0 +1,1 @@
+import{b as p}from"./chunk-RVAXEFZR.js";import{a as e,b as o,c as n}from"./chunk-OQFYL3NE.js";import{a as t}from"./chunk-2JM5GVQW.js";var s=e,c=o,i=n,x=`${t.prefix}-menu-button`;var r=class extends p{};export{s as a,c as b,i as c,x as d,r as e};

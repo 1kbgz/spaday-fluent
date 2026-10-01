@@ -1,0 +1,1 @@
+import{b as i}from"./chunk-PKFYNVHY.js";import{a as r}from"./chunk-2JM5GVQW.js";import{a as t}from"./chunk-Q4D7YGYH.js";var o=class extends t{clickHandler(n){if(!n.defaultPrevented){let e=this.parentElement;i(e,"-drawer")&&e.hide()}return!0}};var f=`${r.prefix}-drawer-body`;export{o as a,f as b};

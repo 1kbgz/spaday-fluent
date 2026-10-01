@@ -1,1 +1,1 @@
-import{a}from"../../../../../chunks/chunk-2FK2FR3U.js";export{a as getInitials};
+import{a}from"../../../../../chunks/chunk-PV3TEKQ3.js";export{a as getInitials};
