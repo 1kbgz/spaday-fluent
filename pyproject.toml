@@ -53,6 +53,7 @@ develop = [
     "hatchling",
     "httpx",
     "mdformat",
+    "mdformat-frontmatter",
     "mdformat-tables>=1",
     "pydantic>=2",
     "pytest",
@@ -105,6 +106,7 @@ omit = [
     "spaday_fluent/components.py",
     "spaday_fluent/example.py",
     "spaday_fluent/tests/integration.py",
+    "spaday_fluent/tests/integration/*",
 ]
 
 [tool.coverage.report]
