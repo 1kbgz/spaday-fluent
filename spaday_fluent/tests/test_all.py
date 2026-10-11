@@ -21,6 +21,7 @@ def test_catalog_uses_the_tags_the_package_registers():
     # the published manifest's stale names for those two are corrected, not carried
     assert not {"fluent-dropdown-option", "fluent-text-area"} & tags
     # enum props come from the analyzer's expanded types rather than opaque aliases
+    assert FluentBadge.schema is not None
     color = next(prop for prop in FluentBadge.schema.props if prop.name == "color")
     assert color.kind == "enum" and "brand" in color.choices
 
