@@ -1,1 +1,1 @@
-import{a}from"../../../../chunks/chunk-67J2UKOG.js";import"../../../../chunks/chunk-Q3ZICGUP.js";import"../../../../chunks/chunk-4XBYRGMZ.js";import"../../../../chunks/chunk-MHZPPO6A.js";export{a as DOMPolicy};
+import{a}from"../../../../chunks/chunk-RYAXHBKE.js";import"../../../../chunks/chunk-MOJY3Y5U.js";import"../../../../chunks/chunk-AUQZ4FAZ.js";import"../../../../chunks/chunk-FSFUBHS3.js";export{a as DOMPolicy};

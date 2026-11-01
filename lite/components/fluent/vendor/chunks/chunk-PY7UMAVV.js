@@ -1,0 +1,5 @@
+import{c as o}from"./chunk-OUGR4WG6.js";import{a as s}from"./chunk-QTJD2FRA.js";import{a as l}from"./chunk-JKPIY6FI.js";import{a as d}from"./chunk-22KUZYRT.js";import{a as r}from"./chunk-QIOOQKZZ.js";import{f as i}from"./chunk-CXT2AAXT.js";import{c as a}from"./chunk-L44UMAPT.js";var t=class extends r{disabledChanged(e,n){this.setDisabledSideEffect(n)}constructor(){super(),this.elementInternals=this.attachInternals(),this.elementInternals.role="tab"}connectedCallback(){super.connectedCallback(),this.slot||="tab",this.setDisabledSideEffect(this.disabled),this.styles&&this.$fastController.removeStyles(this.styles),this.styles=a`
+      :host {
+        --textContent: '${this.textContent}';
+      }
+    `,this.$fastController.addStyles(this.styles),d(this)}setDisabledSideEffect(e){e?this.setAttribute("aria-disabled","true"):this.removeAttribute("aria-disabled"),this.tabIndex=e&&this.getAttribute("aria-selected")!=="true"?-1:0}};s([i({mode:"boolean"})],t.prototype,"disabled",void 0);l(t,o);export{t as a};

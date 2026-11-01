@@ -1,0 +1,1 @@
+import{b as i}from"./chunk-RZKZSRP2.js";import{a as r}from"./chunk-MTF7GSAX.js";import{a as t}from"./chunk-QIOOQKZZ.js";var o=class extends t{clickHandler(n){if(!n.defaultPrevented){let e=this.parentElement;i(e)&&e.hide()}return!0}};var f=`${r.prefix}-dialog-body`;export{o as a,f as b};

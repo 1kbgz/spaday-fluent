@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-MTF7GSAX.js";import{a as t}from"./chunk-TKWV5KNO.js";var n={small:"small",medium:"medium",large:"large",extraLarge:"extra-large"},a={start:"start",end:"end"};function c(r,o="-accordion-item"){return t(o)(r)}var s=`${e.prefix}-accordion-item`;export{n as a,a as b,c,s as d};
